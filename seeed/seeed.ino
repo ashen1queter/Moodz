@@ -86,6 +86,11 @@ void setup() {
 }
 
 void loop() {
+  is_Battery_charge();
+  if(isCharging){
+    DEBUG_PRINTLN("Device is charging!");
+    exit(0);
+  }
   BLEDevice central = BLE.central();
 
   if (central) {
