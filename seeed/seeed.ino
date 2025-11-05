@@ -25,6 +25,7 @@ void Temp_sensor();
 void Battery_charge();
 
 bool isCharging = false;
+bool isCharged = false;
 
 float temperature;
 
@@ -86,11 +87,14 @@ void setup() {
 }
 
 void loop() {
-  is_Battery_charge();
-  if(isCharging){
-    DEBUG_PRINTLN("Device is charging!");
-    //exit(0);
+  checkBatteryStatus();
+
+  if (isCharging) {
+    DEBUG_PRINTLN("Charging in progress, skipping operations...");
+    delay(1000);
+    return;
   }
+
   BLEDevice central = BLE.central();
 
   if (central) {
@@ -107,7 +111,7 @@ void loop() {
         Heartbeat_sensor();
         GSR_sensor();
         Temp_sensor();
-
+        //Mood_detection
         snprintf(lastMessage, sizeof(lastMessage),
                  "HR: %.1f bpm | Avg: %d | GSR: %.1f | Temp: %.2f°C",
                  beatsPerMinute, beatAvg, gsrFiltered, temperature);
@@ -205,9 +209,34 @@ void Battery_charge() {
   pinMode(CHARGE_DETECT_PIN, INPUT);
 }
 
-void is_Battery_charge() {
-  isCharging = (digitalRead(CHARGE_DETECT_PIN) == LOW);
-  if(isCharging){
-    pinMode(ADC_PIN, INPUT);
+void checkBatteryStatus() {
+  int chgState = digitalRead(CHARGE_DETECT_PIN);
+
+  if (chgState == LOW) {
+    if (!isCharging) {
+      isCharging = true;
+      isCharged = false;
+      DEBUG_PRINTLN("Battery is charging...");
+      pinMode(ADC_PIN, INPUT);    // prevent high drive
+      BLE.disconnect();
+      BLE.end();
+      particleSensor.setPulseAmplitudeRed(0);
+      particleSensor.setPulseAmplitudeGreen(0);
+    }
+  } 
+  else { 
+    if (isCharging) {
+      isCharging = false;
+      isCharged = true;
+      DEBUG_PRINTLN("Battery is fully charged!");
+      particleSensor.setPulseAmplitudeRed(0x0A);
+      BLE.begin();
+      BLE.advertise();
+    }
   }
+}
+
+void BLE_rssi() {
+  DEBUG_PRINTLN(BLE.rssi());
+  //Link is weak then disconnect
 }
