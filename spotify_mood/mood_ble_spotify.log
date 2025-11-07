@@ -984,3 +984,60 @@ TypeError: handle_notify() takes 1 positional argument but 2 were given
 2025-11-07 20:16:09,829 | INFO | BLE mood value 4 \u2192 Calm
 2025-11-07 20:16:09,831 | WARNING | No songs found for mood 'Calm'.
 2025-11-07 20:16:09,944 | INFO | Sent 0x04 to stop BLE notifications after displaying mood.
+2025-11-07 20:30:17,811 | INFO | Program terminated manually
+2025-11-07 20:30:22,312 | INFO | Logged into Spotify as Ashen
+2025-11-07 20:30:31,361 | INFO | Loaded 2 tracks from playlist 3Ib7ktwotnOXCWbDypieVy
+2025-11-07 20:30:31,361 | INFO | Started mood analysis using Track Analysis API
+2025-11-07 20:30:35,537 | INFO | Request #1 | 'Blinding Lights' by The Weeknd | Status: 403 | Time: 4.18s
+2025-11-07 20:30:35,537 | WARNING | Skipped 'Blinding Lights' (403)
+2025-11-07 20:30:43,465 | INFO | Request #2 | 'blue' by yung kai | Status: 403 | Time: 1.93s
+2025-11-07 20:30:43,466 | WARNING | Skipped 'blue' (403)
+2025-11-07 20:30:49,467 | INFO | API Summary: 2 requests, 0 success, 0 rate-limit hits, avg time 0.00s
+2025-11-07 20:30:49,502 | INFO | Scanning for BLE device 'XIAO_Sense'
+2025-11-07 20:30:49,812 | INFO | Found BLE device XIAO_Sense at C6:14:45:98:E8:89
+2025-11-07 20:30:52,118 | INFO | Connected to BLE device
+2025-11-07 20:30:52,239 | INFO | Started BLE notifications
+2025-11-07 20:30:52,352 | INFO | BLE notification: value=4
+2025-11-07 20:30:52,352 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 20:30:52,353 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 20:30:52,354 | INFO | Started listening for BLE mood data
+2025-11-07 20:30:52,470 | INFO | Sent 0x04 to stop BLE notifications after displaying mood.
+2025-11-07 20:32:00,083 | INFO | Program terminated manually
+2025-11-07 20:32:08,771 | INFO | Logged into Spotify as Ashen
+2025-11-07 20:32:14,463 | INFO | Loaded 2 tracks from playlist 3Ib7ktwotnOXCWbDypieVy
+2025-11-07 20:32:14,464 | INFO | Started mood analysis using Track Analysis API
+2025-11-07 20:32:16,301 | INFO | Request #1 | 'Blinding Lights' by The Weeknd | Status: 403 | Time: 1.84s
+2025-11-07 20:32:16,301 | WARNING | Skipped 'Blinding Lights' (403)
+2025-11-07 20:32:24,236 | INFO | Request #2 | 'blue' by yung kai | Status: 403 | Time: 1.93s
+2025-11-07 20:32:24,236 | WARNING | Skipped 'blue' (403)
+2025-11-07 20:32:30,237 | INFO | API Summary: 2 requests, 0 success, 0 rate-limit hits, avg time 0.00s
+2025-11-07 20:32:30,245 | INFO | Scanning for BLE device 'XIAO_Sense'
+2025-11-07 20:32:31,235 | INFO | Found BLE device XIAO_Sense at C6:14:45:98:E8:89
+2025-11-07 20:32:33,632 | INFO | Connected to BLE device
+2025-11-07 20:32:33,749 | INFO | Started BLE notifications
+2025-11-07 20:32:33,868 | INFO | BLE notification: value=4
+2025-11-07 20:32:33,868 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 20:32:33,869 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 20:32:33,870 | INFO | Started listening for BLE mood data
+2025-11-07 20:32:33,987 | INFO | Sent 0x04 to stop BLE notifications after displaying mood.
+2025-11-07 20:33:06,481 | INFO | Program terminated manually
+2025-11-07 20:34:44,594 | INFO | Logged into Spotify as Ashen
+2025-11-07 20:34:48,872 | INFO | Loaded 2 tracks from playlist 3Ib7ktwotnOXCWbDypieVy
+2025-11-07 20:34:48,874 | INFO | Started mood analysis using Track Analysis API
+2025-11-07 20:34:51,627 | INFO | Request #1 | 'Blinding Lights' by The Weeknd | Status: 200 | Time: 2.75s
+2025-11-07 20:34:51,627 | INFO | \u2192 Classified 'Blinding Lights' as Calm (happiness=33, energy=73)
+2025-11-07 20:34:59,525 | INFO | Request #2 | 'blue' by yung kai | Status: 200 | Time: 1.90s
+2025-11-07 20:34:59,525 | INFO | \u2192 Classified 'blue' as Calm (happiness=59, energy=32)
+2025-11-07 20:35:05,525 | INFO | API Summary: 2 requests, 2 success, 0 rate-limit hits, avg time 2.32s
+2025-11-07 20:35:05,536 | INFO | Calm \u2192 Blinding Lights — The Weeknd
+2025-11-07 20:35:05,539 | INFO | Calm \u2192 blue — yung kai
+2025-11-07 20:35:05,543 | INFO | Scanning for BLE device 'XIAO_Sense'
+2025-11-07 20:35:06,529 | INFO | Found BLE device XIAO_Sense at C6:14:45:98:E8:89
+2025-11-07 20:35:08,802 | INFO | Connected to BLE device
+2025-11-07 20:35:08,907 | INFO | Started BLE notifications
+2025-11-07 20:35:09,025 | INFO | BLE notification: value=4
+2025-11-07 20:35:09,026 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 20:35:09,027 | INFO | Suggested: Blinding Lights — The Weeknd
+2025-11-07 20:35:09,028 | INFO | Suggested: blue — yung kai
+2025-11-07 20:35:09,032 | INFO | Started listening for BLE mood data
+2025-11-07 20:35:09,143 | INFO | Sent 0x04 to stop BLE notifications after displaying mood.
