@@ -15,3 +15,972 @@
 2025-11-07 19:52:19,690 | INFO | Blinding Lights \u2192 Calm (33, 73)
 2025-11-07 19:52:22,240 | INFO | Request for 'blue' | Status: 200
 2025-11-07 19:52:22,241 | INFO | blue \u2192 Calm (59, 32)
+2025-11-07 19:57:26,284 | INFO | Logged into Spotify as Ashen
+2025-11-07 19:57:34,446 | INFO | Loaded 2 tracks from playlist 3Ib7ktwotnOXCWbDypieVy
+2025-11-07 19:57:34,447 | INFO | Started mood analysis using Track Analysis API
+2025-11-07 19:57:35,638 | INFO | Request #1 | 'Blinding Lights' by The Weeknd | Status: 429 | Time: 1.19s
+2025-11-07 19:57:35,639 | WARNING | Rate limit hit on request #1 ('Blinding Lights') — skipping
+2025-11-07 19:57:36,799 | INFO | Request #2 | 'blue' by yung kai | Status: 429 | Time: 1.16s
+2025-11-07 19:57:36,800 | WARNING | Rate limit hit on request #2 ('blue') — skipping
+2025-11-07 19:57:36,800 | INFO | API Summary: 2 requests, 0 success, 2 rate-limit hits, avg time 0.00s
+2025-11-07 19:57:36,810 | INFO | Scanning for BLE device 'XIAO_Sense'
+2025-11-07 19:57:37,975 | INFO | Found BLE device XIAO_Sense at C6:14:45:98:E8:89
+2025-11-07 19:57:40,884 | INFO | Connected to BLE device
+2025-11-07 19:57:41,006 | INFO | Started BLE notifications
+2025-11-07 19:57:41,119 | INFO | Started listening for BLE mood data
+2025-11-07 19:57:42,802 | INFO | BLE notification from 12345678-1234-5678-1234-56789abcdef1 (Handle: 11): Unknown: value=4
+2025-11-07 19:57:42,803 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 19:57:42,804 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 19:57:44,899 | INFO | BLE notification from 12345678-1234-5678-1234-56789abcdef1 (Handle: 11): Unknown: value=4
+2025-11-07 19:57:44,900 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 19:57:44,901 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 19:57:46,817 | INFO | BLE notification from 12345678-1234-5678-1234-56789abcdef1 (Handle: 11): Unknown: value=4
+2025-11-07 19:57:46,818 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 19:57:46,818 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 19:57:48,797 | INFO | BLE notification from 12345678-1234-5678-1234-56789abcdef1 (Handle: 11): Unknown: value=4
+2025-11-07 19:57:48,797 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 19:57:48,798 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 19:57:50,902 | INFO | BLE notification from 12345678-1234-5678-1234-56789abcdef1 (Handle: 11): Unknown: value=4
+2025-11-07 19:57:50,904 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 19:57:50,905 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 19:57:52,818 | INFO | BLE notification from 12345678-1234-5678-1234-56789abcdef1 (Handle: 11): Unknown: value=4
+2025-11-07 19:57:52,818 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 19:57:52,819 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 19:57:54,918 | INFO | BLE notification from 12345678-1234-5678-1234-56789abcdef1 (Handle: 11): Unknown: value=4
+2025-11-07 19:57:54,919 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 19:57:54,919 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 19:57:56,839 | INFO | BLE notification from 12345678-1234-5678-1234-56789abcdef1 (Handle: 11): Unknown: value=4
+2025-11-07 19:57:56,841 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 19:57:56,841 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 19:57:58,819 | INFO | BLE notification from 12345678-1234-5678-1234-56789abcdef1 (Handle: 11): Unknown: value=4
+2025-11-07 19:57:58,822 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 19:57:58,822 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 19:57:58,961 | INFO | Program terminated manually
+2025-11-07 19:59:06,576 | INFO | Logged into Spotify as Ashen
+2025-11-07 20:02:37,821 | INFO | Logged into Spotify as Ashen
+2025-11-07 20:02:51,516 | INFO | Loaded 2 tracks from playlist 3Ib7ktwotnOXCWbDypieVy
+2025-11-07 20:02:51,517 | INFO | Started mood analysis using Track Analysis API
+2025-11-07 20:02:53,429 | INFO | Request #1 | 'Blinding Lights' by The Weeknd | Status: 403 | Time: 1.91s
+2025-11-07 20:02:53,430 | WARNING | Skipped 'Blinding Lights' (403)
+2025-11-07 20:03:01,383 | INFO | Request #2 | 'blue' by yung kai | Status: 403 | Time: 1.95s
+2025-11-07 20:03:01,383 | WARNING | Skipped 'blue' (403)
+2025-11-07 20:03:07,384 | INFO | API Summary: 2 requests, 0 success, 0 rate-limit hits, avg time 0.00s
+2025-11-07 20:03:07,397 | INFO | Scanning for BLE device 'XIAO_Sense'
+2025-11-07 20:03:07,813 | INFO | Found BLE device XIAO_Sense at C6:14:45:98:E8:89
+2025-11-07 20:03:10,154 | INFO | Connected to BLE device
+2025-11-07 20:03:10,278 | INFO | Started BLE notifications
+2025-11-07 20:03:10,390 | INFO | Started listening for BLE mood data
+2025-11-07 20:03:12,129 | INFO | BLE notification from 12345678-1234-5678-1234-56789abcdef1 (Handle: 11): Unknown: value=4
+2025-11-07 20:03:12,129 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 20:03:12,130 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 20:03:14,111 | INFO | BLE notification from 12345678-1234-5678-1234-56789abcdef1 (Handle: 11): Unknown: value=4
+2025-11-07 20:03:14,112 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 20:03:14,113 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 20:03:16,210 | INFO | BLE notification from 12345678-1234-5678-1234-56789abcdef1 (Handle: 11): Unknown: value=4
+2025-11-07 20:03:16,211 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 20:03:16,211 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 20:03:18,128 | INFO | BLE notification from 12345678-1234-5678-1234-56789abcdef1 (Handle: 11): Unknown: value=4
+2025-11-07 20:03:18,128 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 20:03:18,129 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 20:03:20,110 | INFO | BLE notification from 12345678-1234-5678-1234-56789abcdef1 (Handle: 11): Unknown: value=4
+2025-11-07 20:03:20,113 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 20:03:20,114 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 20:03:22,209 | INFO | BLE notification from 12345678-1234-5678-1234-56789abcdef1 (Handle: 11): Unknown: value=4
+2025-11-07 20:03:22,209 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 20:03:22,210 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 20:03:23,884 | INFO | Program terminated manually
+2025-11-07 20:07:24,015 | INFO | Logged into Spotify as Ashen
+2025-11-07 20:07:34,518 | INFO | Logged into Spotify as Ashen
+2025-11-07 20:07:37,650 | INFO | Loaded 2 tracks from playlist 3Ib7ktwotnOXCWbDypieVy
+2025-11-07 20:07:37,651 | INFO | Started mood analysis using Track Analysis API
+2025-11-07 20:07:39,692 | INFO | Request #1 | 'Blinding Lights' by The Weeknd | Status: 403 | Time: 2.04s
+2025-11-07 20:07:39,692 | WARNING | Skipped 'Blinding Lights' (403)
+2025-11-07 20:07:47,499 | INFO | Request #2 | 'blue' by yung kai | Status: 403 | Time: 1.81s
+2025-11-07 20:07:47,499 | WARNING | Skipped 'blue' (403)
+2025-11-07 20:07:53,499 | INFO | API Summary: 2 requests, 0 success, 0 rate-limit hits, avg time 0.00s
+2025-11-07 20:07:53,506 | INFO | Scanning for BLE device 'XIAO_Sense'
+2025-11-07 20:07:53,802 | INFO | Found BLE device XIAO_Sense at C6:14:45:98:E8:89
+2025-11-07 20:07:56,166 | INFO | Connected to BLE device
+2025-11-07 20:07:56,282 | INFO | Started BLE notifications
+2025-11-07 20:07:56,401 | INFO | Started listening for BLE mood data
+2025-11-07 20:07:58,020 | ERROR | Exception in callback handle_notify()() at c:\Users\HI\Desktop\Moodz\spotify_mood\venv\yoyo.py:171
+handle: <Handle handle_notify()() at c:\Users\HI\Desktop\Moodz\spotify_mood\venv\yoyo.py:171>
+Traceback (most recent call last):
+  File "C:\Users\HI\AppData\Local\Programs\Python\Python313\Lib\asyncio\events.py", line 89, in _run
+    self._context.run(self._callback, *self._args)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: handle_notify() takes 1 positional argument but 2 were given
+2025-11-07 20:08:00,000 | ERROR | Exception in callback handle_notify()() at c:\Users\HI\Desktop\Moodz\spotify_mood\venv\yoyo.py:171
+handle: <Handle handle_notify()() at c:\Users\HI\Desktop\Moodz\spotify_mood\venv\yoyo.py:171>
+Traceback (most recent call last):
+  File "C:\Users\HI\AppData\Local\Programs\Python\Python313\Lib\asyncio\events.py", line 89, in _run
+    self._context.run(self._callback, *self._args)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: handle_notify() takes 1 positional argument but 2 were given
+2025-11-07 20:08:02,102 | ERROR | Exception in callback handle_notify()() at c:\Users\HI\Desktop\Moodz\spotify_mood\venv\yoyo.py:171
+handle: <Handle handle_notify()() at c:\Users\HI\Desktop\Moodz\spotify_mood\venv\yoyo.py:171>
+Traceback (most recent call last):
+  File "C:\Users\HI\AppData\Local\Programs\Python\Python313\Lib\asyncio\events.py", line 89, in _run
+    self._context.run(self._callback, *self._args)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: handle_notify() takes 1 positional argument but 2 were given
+2025-11-07 20:08:04,019 | ERROR | Exception in callback handle_notify()() at c:\Users\HI\Desktop\Moodz\spotify_mood\venv\yoyo.py:171
+handle: <Handle handle_notify()() at c:\Users\HI\Desktop\Moodz\spotify_mood\venv\yoyo.py:171>
+Traceback (most recent call last):
+  File "C:\Users\HI\AppData\Local\Programs\Python\Python313\Lib\asyncio\events.py", line 89, in _run
+    self._context.run(self._callback, *self._args)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: handle_notify() takes 1 positional argument but 2 were given
+2025-11-07 20:08:06,000 | ERROR | Exception in callback handle_notify()() at c:\Users\HI\Desktop\Moodz\spotify_mood\venv\yoyo.py:171
+handle: <Handle handle_notify()() at c:\Users\HI\Desktop\Moodz\spotify_mood\venv\yoyo.py:171>
+Traceback (most recent call last):
+  File "C:\Users\HI\AppData\Local\Programs\Python\Python313\Lib\asyncio\events.py", line 89, in _run
+    self._context.run(self._callback, *self._args)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: handle_notify() takes 1 positional argument but 2 were given
+2025-11-07 20:08:08,101 | ERROR | Exception in callback handle_notify()() at c:\Users\HI\Desktop\Moodz\spotify_mood\venv\yoyo.py:171
+handle: <Handle handle_notify()() at c:\Users\HI\Desktop\Moodz\spotify_mood\venv\yoyo.py:171>
+Traceback (most recent call last):
+  File "C:\Users\HI\AppData\Local\Programs\Python\Python313\Lib\asyncio\events.py", line 89, in _run
+    self._context.run(self._callback, *self._args)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: handle_notify() takes 1 positional argument but 2 were given
+2025-11-07 20:08:10,021 | ERROR | Exception in callback handle_notify()() at c:\Users\HI\Desktop\Moodz\spotify_mood\venv\yoyo.py:171
+handle: <Handle handle_notify()() at c:\Users\HI\Desktop\Moodz\spotify_mood\venv\yoyo.py:171>
+Traceback (most recent call last):
+  File "C:\Users\HI\AppData\Local\Programs\Python\Python313\Lib\asyncio\events.py", line 89, in _run
+    self._context.run(self._callback, *self._args)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: handle_notify() takes 1 positional argument but 2 were given
+2025-11-07 20:08:12,000 | ERROR | Exception in callback handle_notify()() at c:\Users\HI\Desktop\Moodz\spotify_mood\venv\yoyo.py:171
+handle: <Handle handle_notify()() at c:\Users\HI\Desktop\Moodz\spotify_mood\venv\yoyo.py:171>
+Traceback (most recent call last):
+  File "C:\Users\HI\AppData\Local\Programs\Python\Python313\Lib\asyncio\events.py", line 89, in _run
+    self._context.run(self._callback, *self._args)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: handle_notify() takes 1 positional argument but 2 were given
+2025-11-07 20:08:14,100 | ERROR | Exception in callback handle_notify()() at c:\Users\HI\Desktop\Moodz\spotify_mood\venv\yoyo.py:171
+handle: <Handle handle_notify()() at c:\Users\HI\Desktop\Moodz\spotify_mood\venv\yoyo.py:171>
+Traceback (most recent call last):
+  File "C:\Users\HI\AppData\Local\Programs\Python\Python313\Lib\asyncio\events.py", line 89, in _run
+    self._context.run(self._callback, *self._args)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: handle_notify() takes 1 positional argument but 2 were given
+2025-11-07 20:08:16,019 | ERROR | Exception in callback handle_notify()() at c:\Users\HI\Desktop\Moodz\spotify_mood\venv\yoyo.py:171
+handle: <Handle handle_notify()() at c:\Users\HI\Desktop\Moodz\spotify_mood\venv\yoyo.py:171>
+Traceback (most recent call last):
+  File "C:\Users\HI\AppData\Local\Programs\Python\Python313\Lib\asyncio\events.py", line 89, in _run
+    self._context.run(self._callback, *self._args)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: handle_notify() takes 1 positional argument but 2 were given
+2025-11-07 20:08:17,999 | ERROR | Exception in callback handle_notify()() at c:\Users\HI\Desktop\Moodz\spotify_mood\venv\yoyo.py:171
+handle: <Handle handle_notify()() at c:\Users\HI\Desktop\Moodz\spotify_mood\venv\yoyo.py:171>
+Traceback (most recent call last):
+  File "C:\Users\HI\AppData\Local\Programs\Python\Python313\Lib\asyncio\events.py", line 89, in _run
+    self._context.run(self._callback, *self._args)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: handle_notify() takes 1 positional argument but 2 were given
+2025-11-07 20:08:20,100 | ERROR | Exception in callback handle_notify()() at c:\Users\HI\Desktop\Moodz\spotify_mood\venv\yoyo.py:171
+handle: <Handle handle_notify()() at c:\Users\HI\Desktop\Moodz\spotify_mood\venv\yoyo.py:171>
+Traceback (most recent call last):
+  File "C:\Users\HI\AppData\Local\Programs\Python\Python313\Lib\asyncio\events.py", line 89, in _run
+    self._context.run(self._callback, *self._args)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: handle_notify() takes 1 positional argument but 2 were given
+2025-11-07 20:08:22,020 | ERROR | Exception in callback handle_notify()() at c:\Users\HI\Desktop\Moodz\spotify_mood\venv\yoyo.py:171
+handle: <Handle handle_notify()() at c:\Users\HI\Desktop\Moodz\spotify_mood\venv\yoyo.py:171>
+Traceback (most recent call last):
+  File "C:\Users\HI\AppData\Local\Programs\Python\Python313\Lib\asyncio\events.py", line 89, in _run
+    self._context.run(self._callback, *self._args)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: handle_notify() takes 1 positional argument but 2 were given
+2025-11-07 20:08:24,121 | ERROR | Exception in callback handle_notify()() at c:\Users\HI\Desktop\Moodz\spotify_mood\venv\yoyo.py:171
+handle: <Handle handle_notify()() at c:\Users\HI\Desktop\Moodz\spotify_mood\venv\yoyo.py:171>
+Traceback (most recent call last):
+  File "C:\Users\HI\AppData\Local\Programs\Python\Python313\Lib\asyncio\events.py", line 89, in _run
+    self._context.run(self._callback, *self._args)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: handle_notify() takes 1 positional argument but 2 were given
+2025-11-07 20:08:26,038 | ERROR | Exception in callback handle_notify()() at c:\Users\HI\Desktop\Moodz\spotify_mood\venv\yoyo.py:171
+handle: <Handle handle_notify()() at c:\Users\HI\Desktop\Moodz\spotify_mood\venv\yoyo.py:171>
+Traceback (most recent call last):
+  File "C:\Users\HI\AppData\Local\Programs\Python\Python313\Lib\asyncio\events.py", line 89, in _run
+    self._context.run(self._callback, *self._args)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: handle_notify() takes 1 positional argument but 2 were given
+2025-11-07 20:08:28,019 | ERROR | Exception in callback handle_notify()() at c:\Users\HI\Desktop\Moodz\spotify_mood\venv\yoyo.py:171
+handle: <Handle handle_notify()() at c:\Users\HI\Desktop\Moodz\spotify_mood\venv\yoyo.py:171>
+Traceback (most recent call last):
+  File "C:\Users\HI\AppData\Local\Programs\Python\Python313\Lib\asyncio\events.py", line 89, in _run
+    self._context.run(self._callback, *self._args)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: handle_notify() takes 1 positional argument but 2 were given
+2025-11-07 20:08:30,120 | ERROR | Exception in callback handle_notify()() at c:\Users\HI\Desktop\Moodz\spotify_mood\venv\yoyo.py:171
+handle: <Handle handle_notify()() at c:\Users\HI\Desktop\Moodz\spotify_mood\venv\yoyo.py:171>
+Traceback (most recent call last):
+  File "C:\Users\HI\AppData\Local\Programs\Python\Python313\Lib\asyncio\events.py", line 89, in _run
+    self._context.run(self._callback, *self._args)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: handle_notify() takes 1 positional argument but 2 were given
+2025-11-07 20:08:32,039 | ERROR | Exception in callback handle_notify()() at c:\Users\HI\Desktop\Moodz\spotify_mood\venv\yoyo.py:171
+handle: <Handle handle_notify()() at c:\Users\HI\Desktop\Moodz\spotify_mood\venv\yoyo.py:171>
+Traceback (most recent call last):
+  File "C:\Users\HI\AppData\Local\Programs\Python\Python313\Lib\asyncio\events.py", line 89, in _run
+    self._context.run(self._callback, *self._args)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: handle_notify() takes 1 positional argument but 2 were given
+2025-11-07 20:08:34,020 | ERROR | Exception in callback handle_notify()() at c:\Users\HI\Desktop\Moodz\spotify_mood\venv\yoyo.py:171
+handle: <Handle handle_notify()() at c:\Users\HI\Desktop\Moodz\spotify_mood\venv\yoyo.py:171>
+Traceback (most recent call last):
+  File "C:\Users\HI\AppData\Local\Programs\Python\Python313\Lib\asyncio\events.py", line 89, in _run
+    self._context.run(self._callback, *self._args)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: handle_notify() takes 1 positional argument but 2 were given
+2025-11-07 20:08:36,119 | ERROR | Exception in callback handle_notify()() at c:\Users\HI\Desktop\Moodz\spotify_mood\venv\yoyo.py:171
+handle: <Handle handle_notify()() at c:\Users\HI\Desktop\Moodz\spotify_mood\venv\yoyo.py:171>
+Traceback (most recent call last):
+  File "C:\Users\HI\AppData\Local\Programs\Python\Python313\Lib\asyncio\events.py", line 89, in _run
+    self._context.run(self._callback, *self._args)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: handle_notify() takes 1 positional argument but 2 were given
+2025-11-07 20:08:38,038 | ERROR | Exception in callback handle_notify()() at c:\Users\HI\Desktop\Moodz\spotify_mood\venv\yoyo.py:171
+handle: <Handle handle_notify()() at c:\Users\HI\Desktop\Moodz\spotify_mood\venv\yoyo.py:171>
+Traceback (most recent call last):
+  File "C:\Users\HI\AppData\Local\Programs\Python\Python313\Lib\asyncio\events.py", line 89, in _run
+    self._context.run(self._callback, *self._args)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: handle_notify() takes 1 positional argument but 2 were given
+2025-11-07 20:08:40,019 | ERROR | Exception in callback handle_notify()() at c:\Users\HI\Desktop\Moodz\spotify_mood\venv\yoyo.py:171
+handle: <Handle handle_notify()() at c:\Users\HI\Desktop\Moodz\spotify_mood\venv\yoyo.py:171>
+Traceback (most recent call last):
+  File "C:\Users\HI\AppData\Local\Programs\Python\Python313\Lib\asyncio\events.py", line 89, in _run
+    self._context.run(self._callback, *self._args)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: handle_notify() takes 1 positional argument but 2 were given
+2025-11-07 20:08:42,120 | ERROR | Exception in callback handle_notify()() at c:\Users\HI\Desktop\Moodz\spotify_mood\venv\yoyo.py:171
+handle: <Handle handle_notify()() at c:\Users\HI\Desktop\Moodz\spotify_mood\venv\yoyo.py:171>
+Traceback (most recent call last):
+  File "C:\Users\HI\AppData\Local\Programs\Python\Python313\Lib\asyncio\events.py", line 89, in _run
+    self._context.run(self._callback, *self._args)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: handle_notify() takes 1 positional argument but 2 were given
+2025-11-07 20:08:44,038 | ERROR | Exception in callback handle_notify()() at c:\Users\HI\Desktop\Moodz\spotify_mood\venv\yoyo.py:171
+handle: <Handle handle_notify()() at c:\Users\HI\Desktop\Moodz\spotify_mood\venv\yoyo.py:171>
+Traceback (most recent call last):
+  File "C:\Users\HI\AppData\Local\Programs\Python\Python313\Lib\asyncio\events.py", line 89, in _run
+    self._context.run(self._callback, *self._args)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: handle_notify() takes 1 positional argument but 2 were given
+2025-11-07 20:08:46,017 | ERROR | Exception in callback handle_notify()() at c:\Users\HI\Desktop\Moodz\spotify_mood\venv\yoyo.py:171
+handle: <Handle handle_notify()() at c:\Users\HI\Desktop\Moodz\spotify_mood\venv\yoyo.py:171>
+Traceback (most recent call last):
+  File "C:\Users\HI\AppData\Local\Programs\Python\Python313\Lib\asyncio\events.py", line 89, in _run
+    self._context.run(self._callback, *self._args)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: handle_notify() takes 1 positional argument but 2 were given
+2025-11-07 20:08:48,120 | ERROR | Exception in callback handle_notify()() at c:\Users\HI\Desktop\Moodz\spotify_mood\venv\yoyo.py:171
+handle: <Handle handle_notify()() at c:\Users\HI\Desktop\Moodz\spotify_mood\venv\yoyo.py:171>
+Traceback (most recent call last):
+  File "C:\Users\HI\AppData\Local\Programs\Python\Python313\Lib\asyncio\events.py", line 89, in _run
+    self._context.run(self._callback, *self._args)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: handle_notify() takes 1 positional argument but 2 were given
+2025-11-07 20:08:50,039 | ERROR | Exception in callback handle_notify()() at c:\Users\HI\Desktop\Moodz\spotify_mood\venv\yoyo.py:171
+handle: <Handle handle_notify()() at c:\Users\HI\Desktop\Moodz\spotify_mood\venv\yoyo.py:171>
+Traceback (most recent call last):
+  File "C:\Users\HI\AppData\Local\Programs\Python\Python313\Lib\asyncio\events.py", line 89, in _run
+    self._context.run(self._callback, *self._args)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: handle_notify() takes 1 positional argument but 2 were given
+2025-11-07 20:08:52,018 | ERROR | Exception in callback handle_notify()() at c:\Users\HI\Desktop\Moodz\spotify_mood\venv\yoyo.py:171
+handle: <Handle handle_notify()() at c:\Users\HI\Desktop\Moodz\spotify_mood\venv\yoyo.py:171>
+Traceback (most recent call last):
+  File "C:\Users\HI\AppData\Local\Programs\Python\Python313\Lib\asyncio\events.py", line 89, in _run
+    self._context.run(self._callback, *self._args)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: handle_notify() takes 1 positional argument but 2 were given
+2025-11-07 20:08:54,119 | ERROR | Exception in callback handle_notify()() at c:\Users\HI\Desktop\Moodz\spotify_mood\venv\yoyo.py:171
+handle: <Handle handle_notify()() at c:\Users\HI\Desktop\Moodz\spotify_mood\venv\yoyo.py:171>
+Traceback (most recent call last):
+  File "C:\Users\HI\AppData\Local\Programs\Python\Python313\Lib\asyncio\events.py", line 89, in _run
+    self._context.run(self._callback, *self._args)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: handle_notify() takes 1 positional argument but 2 were given
+2025-11-07 20:08:56,037 | ERROR | Exception in callback handle_notify()() at c:\Users\HI\Desktop\Moodz\spotify_mood\venv\yoyo.py:171
+handle: <Handle handle_notify()() at c:\Users\HI\Desktop\Moodz\spotify_mood\venv\yoyo.py:171>
+Traceback (most recent call last):
+  File "C:\Users\HI\AppData\Local\Programs\Python\Python313\Lib\asyncio\events.py", line 89, in _run
+    self._context.run(self._callback, *self._args)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: handle_notify() takes 1 positional argument but 2 were given
+2025-11-07 20:08:58,018 | ERROR | Exception in callback handle_notify()() at c:\Users\HI\Desktop\Moodz\spotify_mood\venv\yoyo.py:171
+handle: <Handle handle_notify()() at c:\Users\HI\Desktop\Moodz\spotify_mood\venv\yoyo.py:171>
+Traceback (most recent call last):
+  File "C:\Users\HI\AppData\Local\Programs\Python\Python313\Lib\asyncio\events.py", line 89, in _run
+    self._context.run(self._callback, *self._args)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: handle_notify() takes 1 positional argument but 2 were given
+2025-11-07 20:09:00,119 | ERROR | Exception in callback handle_notify()() at c:\Users\HI\Desktop\Moodz\spotify_mood\venv\yoyo.py:171
+handle: <Handle handle_notify()() at c:\Users\HI\Desktop\Moodz\spotify_mood\venv\yoyo.py:171>
+Traceback (most recent call last):
+  File "C:\Users\HI\AppData\Local\Programs\Python\Python313\Lib\asyncio\events.py", line 89, in _run
+    self._context.run(self._callback, *self._args)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: handle_notify() takes 1 positional argument but 2 were given
+2025-11-07 20:09:02,039 | ERROR | Exception in callback handle_notify()() at c:\Users\HI\Desktop\Moodz\spotify_mood\venv\yoyo.py:171
+handle: <Handle handle_notify()() at c:\Users\HI\Desktop\Moodz\spotify_mood\venv\yoyo.py:171>
+Traceback (most recent call last):
+  File "C:\Users\HI\AppData\Local\Programs\Python\Python313\Lib\asyncio\events.py", line 89, in _run
+    self._context.run(self._callback, *self._args)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: handle_notify() takes 1 positional argument but 2 were given
+2025-11-07 20:09:04,017 | ERROR | Exception in callback handle_notify()() at c:\Users\HI\Desktop\Moodz\spotify_mood\venv\yoyo.py:171
+handle: <Handle handle_notify()() at c:\Users\HI\Desktop\Moodz\spotify_mood\venv\yoyo.py:171>
+Traceback (most recent call last):
+  File "C:\Users\HI\AppData\Local\Programs\Python\Python313\Lib\asyncio\events.py", line 89, in _run
+    self._context.run(self._callback, *self._args)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: handle_notify() takes 1 positional argument but 2 were given
+2025-11-07 20:09:06,120 | ERROR | Exception in callback handle_notify()() at c:\Users\HI\Desktop\Moodz\spotify_mood\venv\yoyo.py:171
+handle: <Handle handle_notify()() at c:\Users\HI\Desktop\Moodz\spotify_mood\venv\yoyo.py:171>
+Traceback (most recent call last):
+  File "C:\Users\HI\AppData\Local\Programs\Python\Python313\Lib\asyncio\events.py", line 89, in _run
+    self._context.run(self._callback, *self._args)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: handle_notify() takes 1 positional argument but 2 were given
+2025-11-07 20:09:08,038 | ERROR | Exception in callback handle_notify()() at c:\Users\HI\Desktop\Moodz\spotify_mood\venv\yoyo.py:171
+handle: <Handle handle_notify()() at c:\Users\HI\Desktop\Moodz\spotify_mood\venv\yoyo.py:171>
+Traceback (most recent call last):
+  File "C:\Users\HI\AppData\Local\Programs\Python\Python313\Lib\asyncio\events.py", line 89, in _run
+    self._context.run(self._callback, *self._args)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: handle_notify() takes 1 positional argument but 2 were given
+2025-11-07 20:09:10,141 | ERROR | Exception in callback handle_notify()() at c:\Users\HI\Desktop\Moodz\spotify_mood\venv\yoyo.py:171
+handle: <Handle handle_notify()() at c:\Users\HI\Desktop\Moodz\spotify_mood\venv\yoyo.py:171>
+Traceback (most recent call last):
+  File "C:\Users\HI\AppData\Local\Programs\Python\Python313\Lib\asyncio\events.py", line 89, in _run
+    self._context.run(self._callback, *self._args)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: handle_notify() takes 1 positional argument but 2 were given
+2025-11-07 20:09:12,057 | ERROR | Exception in callback handle_notify()() at c:\Users\HI\Desktop\Moodz\spotify_mood\venv\yoyo.py:171
+handle: <Handle handle_notify()() at c:\Users\HI\Desktop\Moodz\spotify_mood\venv\yoyo.py:171>
+Traceback (most recent call last):
+  File "C:\Users\HI\AppData\Local\Programs\Python\Python313\Lib\asyncio\events.py", line 89, in _run
+    self._context.run(self._callback, *self._args)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: handle_notify() takes 1 positional argument but 2 were given
+2025-11-07 20:09:14,037 | ERROR | Exception in callback handle_notify()() at c:\Users\HI\Desktop\Moodz\spotify_mood\venv\yoyo.py:171
+handle: <Handle handle_notify()() at c:\Users\HI\Desktop\Moodz\spotify_mood\venv\yoyo.py:171>
+Traceback (most recent call last):
+  File "C:\Users\HI\AppData\Local\Programs\Python\Python313\Lib\asyncio\events.py", line 89, in _run
+    self._context.run(self._callback, *self._args)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: handle_notify() takes 1 positional argument but 2 were given
+2025-11-07 20:09:16,139 | ERROR | Exception in callback handle_notify()() at c:\Users\HI\Desktop\Moodz\spotify_mood\venv\yoyo.py:171
+handle: <Handle handle_notify()() at c:\Users\HI\Desktop\Moodz\spotify_mood\venv\yoyo.py:171>
+Traceback (most recent call last):
+  File "C:\Users\HI\AppData\Local\Programs\Python\Python313\Lib\asyncio\events.py", line 89, in _run
+    self._context.run(self._callback, *self._args)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: handle_notify() takes 1 positional argument but 2 were given
+2025-11-07 20:09:18,058 | ERROR | Exception in callback handle_notify()() at c:\Users\HI\Desktop\Moodz\spotify_mood\venv\yoyo.py:171
+handle: <Handle handle_notify()() at c:\Users\HI\Desktop\Moodz\spotify_mood\venv\yoyo.py:171>
+Traceback (most recent call last):
+  File "C:\Users\HI\AppData\Local\Programs\Python\Python313\Lib\asyncio\events.py", line 89, in _run
+    self._context.run(self._callback, *self._args)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: handle_notify() takes 1 positional argument but 2 were given
+2025-11-07 20:09:20,036 | ERROR | Exception in callback handle_notify()() at c:\Users\HI\Desktop\Moodz\spotify_mood\venv\yoyo.py:171
+handle: <Handle handle_notify()() at c:\Users\HI\Desktop\Moodz\spotify_mood\venv\yoyo.py:171>
+Traceback (most recent call last):
+  File "C:\Users\HI\AppData\Local\Programs\Python\Python313\Lib\asyncio\events.py", line 89, in _run
+    self._context.run(self._callback, *self._args)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: handle_notify() takes 1 positional argument but 2 were given
+2025-11-07 20:09:22,138 | ERROR | Exception in callback handle_notify()() at c:\Users\HI\Desktop\Moodz\spotify_mood\venv\yoyo.py:171
+handle: <Handle handle_notify()() at c:\Users\HI\Desktop\Moodz\spotify_mood\venv\yoyo.py:171>
+Traceback (most recent call last):
+  File "C:\Users\HI\AppData\Local\Programs\Python\Python313\Lib\asyncio\events.py", line 89, in _run
+    self._context.run(self._callback, *self._args)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: handle_notify() takes 1 positional argument but 2 were given
+2025-11-07 20:09:24,058 | ERROR | Exception in callback handle_notify()() at c:\Users\HI\Desktop\Moodz\spotify_mood\venv\yoyo.py:171
+handle: <Handle handle_notify()() at c:\Users\HI\Desktop\Moodz\spotify_mood\venv\yoyo.py:171>
+Traceback (most recent call last):
+  File "C:\Users\HI\AppData\Local\Programs\Python\Python313\Lib\asyncio\events.py", line 89, in _run
+    self._context.run(self._callback, *self._args)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: handle_notify() takes 1 positional argument but 2 were given
+2025-11-07 20:09:26,036 | ERROR | Exception in callback handle_notify()() at c:\Users\HI\Desktop\Moodz\spotify_mood\venv\yoyo.py:171
+handle: <Handle handle_notify()() at c:\Users\HI\Desktop\Moodz\spotify_mood\venv\yoyo.py:171>
+Traceback (most recent call last):
+  File "C:\Users\HI\AppData\Local\Programs\Python\Python313\Lib\asyncio\events.py", line 89, in _run
+    self._context.run(self._callback, *self._args)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: handle_notify() takes 1 positional argument but 2 were given
+2025-11-07 20:09:28,139 | ERROR | Exception in callback handle_notify()() at c:\Users\HI\Desktop\Moodz\spotify_mood\venv\yoyo.py:171
+handle: <Handle handle_notify()() at c:\Users\HI\Desktop\Moodz\spotify_mood\venv\yoyo.py:171>
+Traceback (most recent call last):
+  File "C:\Users\HI\AppData\Local\Programs\Python\Python313\Lib\asyncio\events.py", line 89, in _run
+    self._context.run(self._callback, *self._args)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: handle_notify() takes 1 positional argument but 2 were given
+2025-11-07 20:09:30,058 | ERROR | Exception in callback handle_notify()() at c:\Users\HI\Desktop\Moodz\spotify_mood\venv\yoyo.py:171
+handle: <Handle handle_notify()() at c:\Users\HI\Desktop\Moodz\spotify_mood\venv\yoyo.py:171>
+Traceback (most recent call last):
+  File "C:\Users\HI\AppData\Local\Programs\Python\Python313\Lib\asyncio\events.py", line 89, in _run
+    self._context.run(self._callback, *self._args)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: handle_notify() takes 1 positional argument but 2 were given
+2025-11-07 20:09:32,036 | ERROR | Exception in callback handle_notify()() at c:\Users\HI\Desktop\Moodz\spotify_mood\venv\yoyo.py:171
+handle: <Handle handle_notify()() at c:\Users\HI\Desktop\Moodz\spotify_mood\venv\yoyo.py:171>
+Traceback (most recent call last):
+  File "C:\Users\HI\AppData\Local\Programs\Python\Python313\Lib\asyncio\events.py", line 89, in _run
+    self._context.run(self._callback, *self._args)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: handle_notify() takes 1 positional argument but 2 were given
+2025-11-07 20:09:34,138 | ERROR | Exception in callback handle_notify()() at c:\Users\HI\Desktop\Moodz\spotify_mood\venv\yoyo.py:171
+handle: <Handle handle_notify()() at c:\Users\HI\Desktop\Moodz\spotify_mood\venv\yoyo.py:171>
+Traceback (most recent call last):
+  File "C:\Users\HI\AppData\Local\Programs\Python\Python313\Lib\asyncio\events.py", line 89, in _run
+    self._context.run(self._callback, *self._args)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: handle_notify() takes 1 positional argument but 2 were given
+2025-11-07 20:09:35,078 | INFO | Program terminated manually
+2025-11-07 20:09:38,116 | INFO | Logged into Spotify as Ashen
+2025-11-07 20:09:44,151 | INFO | Loaded 2 tracks from playlist 3Ib7ktwotnOXCWbDypieVy
+2025-11-07 20:09:44,152 | INFO | Started mood analysis using Track Analysis API
+2025-11-07 20:09:46,034 | INFO | Request #1 | 'Blinding Lights' by The Weeknd | Status: 403 | Time: 1.88s
+2025-11-07 20:09:46,035 | WARNING | Skipped 'Blinding Lights' (403)
+2025-11-07 20:09:53,856 | INFO | Request #2 | 'blue' by yung kai | Status: 403 | Time: 1.82s
+2025-11-07 20:09:53,857 | WARNING | Skipped 'blue' (403)
+2025-11-07 20:09:59,858 | INFO | API Summary: 2 requests, 0 success, 0 rate-limit hits, avg time 0.00s
+2025-11-07 20:09:59,863 | INFO | Scanning for BLE device 'XIAO_Sense'
+2025-11-07 20:10:00,512 | INFO | Found BLE device XIAO_Sense at C6:14:45:98:E8:89
+2025-11-07 20:10:02,761 | INFO | Connected to BLE device
+2025-11-07 20:10:02,878 | INFO | Started BLE notifications
+2025-11-07 20:10:03,000 | INFO | Started listening for BLE mood data
+2025-11-07 20:10:04,736 | INFO | BLE notification: value=4
+2025-11-07 20:10:04,737 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 20:10:04,737 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 20:10:06,715 | INFO | BLE notification: value=4
+2025-11-07 20:10:06,715 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 20:10:06,716 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 20:10:08,696 | INFO | BLE notification: value=4
+2025-11-07 20:10:08,696 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 20:10:08,697 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 20:10:10,797 | INFO | BLE notification: value=4
+2025-11-07 20:10:10,798 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 20:10:10,798 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 20:10:12,716 | INFO | BLE notification: value=4
+2025-11-07 20:10:12,717 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 20:10:12,717 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 20:10:14,696 | INFO | BLE notification: value=4
+2025-11-07 20:10:14,697 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 20:10:14,697 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 20:10:16,796 | INFO | BLE notification: value=4
+2025-11-07 20:10:16,797 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 20:10:16,797 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 20:10:18,717 | INFO | BLE notification: value=4
+2025-11-07 20:10:18,719 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 20:10:18,719 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 20:10:20,699 | INFO | BLE notification: value=4
+2025-11-07 20:10:20,700 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 20:10:20,700 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 20:10:22,799 | INFO | BLE notification: value=4
+2025-11-07 20:10:22,800 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 20:10:22,801 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 20:10:24,717 | INFO | BLE notification: value=4
+2025-11-07 20:10:24,719 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 20:10:24,720 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 20:10:26,695 | INFO | BLE notification: value=4
+2025-11-07 20:10:26,696 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 20:10:26,696 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 20:10:28,796 | INFO | BLE notification: value=4
+2025-11-07 20:10:28,796 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 20:10:28,797 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 20:10:30,714 | INFO | BLE notification: value=4
+2025-11-07 20:10:30,715 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 20:10:30,715 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 20:10:32,694 | INFO | BLE notification: value=4
+2025-11-07 20:10:32,695 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 20:10:32,695 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 20:10:34,798 | INFO | BLE notification: value=4
+2025-11-07 20:10:34,799 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 20:10:34,800 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 20:10:36,717 | INFO | BLE notification: value=4
+2025-11-07 20:10:36,718 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 20:10:36,719 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 20:10:38,820 | INFO | BLE notification: value=4
+2025-11-07 20:10:38,822 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 20:10:38,822 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 20:10:40,735 | INFO | BLE notification: value=4
+2025-11-07 20:10:40,735 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 20:10:40,735 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 20:10:42,714 | INFO | BLE notification: value=4
+2025-11-07 20:10:42,715 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 20:10:42,715 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 20:10:44,822 | INFO | BLE notification: value=4
+2025-11-07 20:10:44,823 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 20:10:44,823 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 20:10:46,738 | INFO | BLE notification: value=4
+2025-11-07 20:10:46,738 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 20:10:46,739 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 20:10:48,714 | INFO | BLE notification: value=4
+2025-11-07 20:10:48,714 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 20:10:48,715 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 20:10:50,816 | INFO | BLE notification: value=4
+2025-11-07 20:10:50,817 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 20:10:50,817 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 20:10:52,734 | INFO | BLE notification: value=4
+2025-11-07 20:10:52,735 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 20:10:52,735 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 20:10:54,714 | INFO | BLE notification: value=4
+2025-11-07 20:10:54,715 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 20:10:54,715 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 20:10:56,694 | INFO | BLE notification: value=4
+2025-11-07 20:10:56,695 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 20:10:56,695 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 20:10:58,794 | INFO | BLE notification: value=4
+2025-11-07 20:10:58,795 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 20:10:58,795 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 20:11:00,714 | INFO | BLE notification: value=4
+2025-11-07 20:11:00,715 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 20:11:00,715 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 20:11:02,815 | INFO | BLE notification: value=4
+2025-11-07 20:11:02,815 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 20:11:02,815 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 20:11:04,740 | INFO | BLE notification: value=4
+2025-11-07 20:11:04,740 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 20:11:04,740 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 20:11:06,714 | INFO | BLE notification: value=4
+2025-11-07 20:11:06,714 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 20:11:06,714 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 20:11:08,819 | INFO | BLE notification: value=4
+2025-11-07 20:11:08,820 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 20:11:08,821 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 20:11:10,734 | INFO | BLE notification: value=4
+2025-11-07 20:11:10,735 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 20:11:10,735 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 20:11:12,718 | INFO | BLE notification: value=4
+2025-11-07 20:11:12,720 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 20:11:12,721 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 20:11:14,818 | INFO | BLE notification: value=4
+2025-11-07 20:11:14,818 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 20:11:14,819 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 20:11:16,737 | INFO | BLE notification: value=4
+2025-11-07 20:11:16,737 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 20:11:16,737 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 20:11:18,713 | INFO | BLE notification: value=4
+2025-11-07 20:11:18,714 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 20:11:18,714 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 20:11:20,816 | INFO | BLE notification: value=4
+2025-11-07 20:11:20,817 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 20:11:20,817 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 20:11:22,734 | INFO | BLE notification: value=4
+2025-11-07 20:11:22,735 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 20:11:22,736 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 20:11:24,718 | INFO | BLE notification: value=4
+2025-11-07 20:11:24,720 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 20:11:24,720 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 20:11:26,814 | INFO | BLE notification: value=4
+2025-11-07 20:11:26,815 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 20:11:26,815 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 20:11:28,736 | INFO | BLE notification: value=4
+2025-11-07 20:11:28,736 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 20:11:28,736 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 20:11:30,713 | INFO | BLE notification: value=4
+2025-11-07 20:11:30,715 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 20:11:30,716 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 20:11:32,814 | INFO | BLE notification: value=4
+2025-11-07 20:11:32,816 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 20:11:32,817 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 20:11:34,733 | INFO | BLE notification: value=4
+2025-11-07 20:11:34,734 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 20:11:34,734 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 20:11:36,833 | INFO | BLE notification: value=4
+2025-11-07 20:11:36,834 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 20:11:36,834 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 20:11:38,752 | INFO | BLE notification: value=4
+2025-11-07 20:11:38,752 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 20:11:38,753 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 20:11:40,733 | INFO | BLE notification: value=4
+2025-11-07 20:11:40,735 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 20:11:40,735 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 20:11:42,712 | INFO | BLE notification: value=4
+2025-11-07 20:11:42,713 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 20:11:42,713 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 20:11:44,817 | INFO | BLE notification: value=4
+2025-11-07 20:11:44,819 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 20:11:44,820 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 20:11:46,732 | INFO | BLE notification: value=4
+2025-11-07 20:11:46,732 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 20:11:46,733 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 20:11:48,711 | INFO | BLE notification: value=4
+2025-11-07 20:11:48,712 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 20:11:48,712 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 20:11:50,814 | INFO | BLE notification: value=4
+2025-11-07 20:11:50,816 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 20:11:50,816 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 20:11:52,731 | INFO | BLE notification: value=4
+2025-11-07 20:11:52,732 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 20:11:52,732 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 20:11:54,711 | INFO | BLE notification: value=4
+2025-11-07 20:11:54,712 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 20:11:54,712 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 20:11:56,813 | INFO | BLE notification: value=4
+2025-11-07 20:11:56,814 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 20:11:56,814 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 20:11:58,732 | INFO | BLE notification: value=4
+2025-11-07 20:11:58,733 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 20:11:58,733 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 20:12:00,833 | INFO | BLE notification: value=4
+2025-11-07 20:12:00,834 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 20:12:00,834 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 20:12:02,751 | INFO | BLE notification: value=4
+2025-11-07 20:12:02,752 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 20:12:02,753 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 20:12:04,732 | INFO | BLE notification: value=4
+2025-11-07 20:12:04,732 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 20:12:04,733 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 20:12:06,833 | INFO | BLE notification: value=4
+2025-11-07 20:12:06,834 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 20:12:06,834 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 20:12:08,751 | INFO | BLE notification: value=4
+2025-11-07 20:12:08,751 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 20:12:08,751 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 20:12:10,731 | INFO | BLE notification: value=4
+2025-11-07 20:12:10,732 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 20:12:10,732 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 20:12:12,833 | INFO | BLE notification: value=4
+2025-11-07 20:12:12,833 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 20:12:12,834 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 20:12:14,751 | INFO | BLE notification: value=4
+2025-11-07 20:12:14,751 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 20:12:14,751 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 20:12:16,731 | INFO | BLE notification: value=4
+2025-11-07 20:12:16,731 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 20:12:16,732 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 20:12:18,833 | INFO | BLE notification: value=4
+2025-11-07 20:12:18,834 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 20:12:18,834 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 20:12:20,752 | INFO | BLE notification: value=4
+2025-11-07 20:12:20,753 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 20:12:20,753 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 20:12:22,731 | INFO | BLE notification: value=4
+2025-11-07 20:12:22,731 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 20:12:22,731 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 20:12:24,832 | INFO | BLE notification: value=4
+2025-11-07 20:12:24,833 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 20:12:24,833 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 20:12:26,750 | INFO | BLE notification: value=4
+2025-11-07 20:12:26,751 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 20:12:26,751 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 20:12:28,734 | INFO | BLE notification: value=4
+2025-11-07 20:12:28,734 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 20:12:28,734 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 20:12:30,832 | INFO | BLE notification: value=4
+2025-11-07 20:12:30,832 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 20:12:30,832 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 20:12:32,750 | INFO | BLE notification: value=4
+2025-11-07 20:12:32,750 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 20:12:32,751 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 20:12:34,731 | INFO | BLE notification: value=4
+2025-11-07 20:12:34,731 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 20:12:34,732 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 20:12:36,834 | INFO | BLE notification: value=4
+2025-11-07 20:12:36,835 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 20:12:36,836 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 20:12:38,751 | INFO | BLE notification: value=4
+2025-11-07 20:12:38,752 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 20:12:38,752 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 20:12:40,730 | INFO | BLE notification: value=4
+2025-11-07 20:12:40,730 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 20:12:40,731 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 20:12:42,836 | INFO | BLE notification: value=4
+2025-11-07 20:12:42,839 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 20:12:42,840 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 20:12:44,752 | INFO | BLE notification: value=4
+2025-11-07 20:12:44,755 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 20:12:44,755 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 20:12:46,730 | INFO | BLE notification: value=4
+2025-11-07 20:12:46,731 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 20:12:46,731 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 20:12:48,835 | INFO | BLE notification: value=4
+2025-11-07 20:12:48,837 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 20:12:48,838 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 20:12:50,750 | INFO | BLE notification: value=4
+2025-11-07 20:12:50,751 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 20:12:50,751 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 20:12:52,730 | INFO | BLE notification: value=4
+2025-11-07 20:12:52,731 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 20:12:52,731 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 20:12:54,835 | INFO | BLE notification: value=4
+2025-11-07 20:12:54,837 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 20:12:54,838 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 20:12:56,813 | INFO | BLE notification: value=4
+2025-11-07 20:12:56,815 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 20:12:56,816 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 20:12:58,732 | INFO | BLE notification: value=4
+2025-11-07 20:12:58,734 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 20:12:58,735 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 20:13:00,834 | INFO | BLE notification: value=4
+2025-11-07 20:13:00,836 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 20:13:00,837 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 20:13:02,750 | INFO | BLE notification: value=4
+2025-11-07 20:13:02,751 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 20:13:02,751 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 20:13:04,854 | INFO | BLE notification: value=4
+2025-11-07 20:13:04,856 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 20:13:04,857 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 20:13:06,769 | INFO | BLE notification: value=4
+2025-11-07 20:13:06,770 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 20:13:06,770 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 20:13:08,766 | INFO | BLE notification: value=4
+2025-11-07 20:13:08,767 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 20:13:08,767 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 20:13:10,855 | INFO | BLE notification: value=4
+2025-11-07 20:13:10,857 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 20:13:10,857 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 20:13:12,772 | INFO | BLE notification: value=4
+2025-11-07 20:13:12,775 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 20:13:12,775 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 20:13:14,749 | INFO | BLE notification: value=4
+2025-11-07 20:13:14,749 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 20:13:14,750 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 20:13:16,854 | INFO | BLE notification: value=4
+2025-11-07 20:13:16,856 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 20:13:16,856 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 20:13:18,769 | INFO | BLE notification: value=4
+2025-11-07 20:13:18,769 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 20:13:18,770 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 20:13:20,752 | INFO | BLE notification: value=4
+2025-11-07 20:13:20,754 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 20:13:20,755 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 20:13:22,851 | INFO | BLE notification: value=4
+2025-11-07 20:13:22,851 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 20:13:22,851 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 20:13:24,773 | INFO | BLE notification: value=4
+2025-11-07 20:13:24,775 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 20:13:24,776 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 20:13:26,752 | INFO | BLE notification: value=4
+2025-11-07 20:13:26,754 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 20:13:26,755 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 20:13:28,854 | INFO | BLE notification: value=4
+2025-11-07 20:13:28,856 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 20:13:28,857 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 20:13:30,769 | INFO | BLE notification: value=4
+2025-11-07 20:13:30,769 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 20:13:30,769 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 20:13:32,749 | INFO | BLE notification: value=4
+2025-11-07 20:13:32,749 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 20:13:32,750 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 20:13:34,851 | INFO | BLE notification: value=4
+2025-11-07 20:13:34,852 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 20:13:34,852 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 20:13:36,772 | INFO | BLE notification: value=4
+2025-11-07 20:13:36,774 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 20:13:36,775 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 20:13:38,751 | INFO | BLE notification: value=4
+2025-11-07 20:13:38,753 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 20:13:38,754 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 20:13:40,850 | INFO | BLE notification: value=4
+2025-11-07 20:13:40,851 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 20:13:40,851 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 20:13:42,771 | INFO | BLE notification: value=4
+2025-11-07 20:13:42,772 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 20:13:42,773 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 20:13:44,872 | INFO | BLE notification: value=4
+2025-11-07 20:13:44,874 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 20:13:44,875 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 20:13:46,789 | INFO | BLE notification: value=4
+2025-11-07 20:13:46,789 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 20:13:46,790 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 20:13:48,768 | INFO | BLE notification: value=4
+2025-11-07 20:13:48,769 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 20:13:48,769 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 20:13:50,873 | INFO | BLE notification: value=4
+2025-11-07 20:13:50,875 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 20:13:50,876 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 20:13:52,787 | INFO | BLE notification: value=4
+2025-11-07 20:13:52,788 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 20:13:52,788 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 20:13:54,769 | INFO | BLE notification: value=4
+2025-11-07 20:13:54,771 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 20:13:54,771 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 20:13:56,869 | INFO | BLE notification: value=4
+2025-11-07 20:13:56,869 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 20:13:56,870 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 20:13:58,788 | INFO | BLE notification: value=4
+2025-11-07 20:13:58,789 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 20:13:58,789 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 20:14:00,771 | INFO | BLE notification: value=4
+2025-11-07 20:14:00,773 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 20:14:00,774 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 20:14:02,872 | INFO | BLE notification: value=4
+2025-11-07 20:14:02,876 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 20:14:02,877 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 20:14:04,788 | INFO | BLE notification: value=4
+2025-11-07 20:14:04,789 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 20:14:04,789 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 20:14:06,770 | INFO | BLE notification: value=4
+2025-11-07 20:14:06,773 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 20:14:06,773 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 20:14:08,870 | INFO | BLE notification: value=4
+2025-11-07 20:14:08,872 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 20:14:08,872 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 20:14:10,787 | INFO | BLE notification: value=4
+2025-11-07 20:14:10,788 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 20:14:10,789 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 20:14:12,891 | INFO | BLE notification: value=4
+2025-11-07 20:14:12,892 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 20:14:12,892 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 20:14:14,809 | INFO | BLE notification: value=4
+2025-11-07 20:14:14,810 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 20:14:14,811 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 20:14:16,787 | INFO | BLE notification: value=4
+2025-11-07 20:14:16,788 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 20:14:16,788 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 20:14:18,890 | INFO | BLE notification: value=4
+2025-11-07 20:14:18,891 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 20:14:18,892 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 20:14:20,809 | INFO | BLE notification: value=4
+2025-11-07 20:14:20,810 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 20:14:20,810 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 20:14:22,790 | INFO | BLE notification: value=4
+2025-11-07 20:14:22,791 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 20:14:22,792 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 20:14:24,889 | INFO | BLE notification: value=4
+2025-11-07 20:14:24,890 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 20:14:24,890 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 20:14:26,808 | INFO | BLE notification: value=4
+2025-11-07 20:14:26,809 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 20:14:26,809 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 20:14:28,786 | INFO | BLE notification: value=4
+2025-11-07 20:14:28,787 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 20:14:28,787 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 20:14:30,892 | INFO | BLE notification: value=4
+2025-11-07 20:14:30,894 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 20:14:30,895 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 20:14:32,812 | INFO | BLE notification: value=4
+2025-11-07 20:14:32,813 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 20:14:32,814 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 20:14:34,786 | INFO | BLE notification: value=4
+2025-11-07 20:14:34,787 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 20:14:34,787 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 20:14:36,889 | INFO | BLE notification: value=4
+2025-11-07 20:14:36,891 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 20:14:36,891 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 20:14:38,807 | INFO | BLE notification: value=4
+2025-11-07 20:14:38,808 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 20:14:38,808 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 20:14:40,797 | INFO | BLE notification: value=4
+2025-11-07 20:14:40,797 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 20:14:40,798 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 20:14:42,889 | INFO | BLE notification: value=4
+2025-11-07 20:14:42,890 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 20:14:42,890 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 20:14:44,824 | INFO | BLE notification: value=4
+2025-11-07 20:14:44,825 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 20:14:44,825 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 20:14:46,786 | INFO | BLE notification: value=4
+2025-11-07 20:14:46,787 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 20:14:46,787 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 20:14:48,889 | INFO | BLE notification: value=4
+2025-11-07 20:14:48,890 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 20:14:48,890 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 20:14:50,807 | INFO | BLE notification: value=4
+2025-11-07 20:14:50,808 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 20:14:50,809 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 20:14:52,970 | INFO | BLE notification: value=4
+2025-11-07 20:14:52,971 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 20:14:52,972 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 20:14:54,825 | INFO | BLE notification: value=4
+2025-11-07 20:14:54,826 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 20:14:54,826 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 20:14:56,806 | INFO | BLE notification: value=4
+2025-11-07 20:14:56,806 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 20:14:56,806 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 20:14:58,785 | INFO | BLE notification: value=4
+2025-11-07 20:14:58,786 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 20:14:58,786 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 20:15:00,887 | INFO | BLE notification: value=4
+2025-11-07 20:15:00,888 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 20:15:00,888 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 20:15:02,808 | INFO | BLE notification: value=4
+2025-11-07 20:15:02,809 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 20:15:02,809 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 20:15:04,909 | INFO | BLE notification: value=4
+2025-11-07 20:15:04,910 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 20:15:04,910 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 20:15:06,827 | INFO | BLE notification: value=4
+2025-11-07 20:15:06,829 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 20:15:06,830 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 20:15:08,809 | INFO | BLE notification: value=4
+2025-11-07 20:15:08,811 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 20:15:08,812 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 20:15:10,907 | INFO | BLE notification: value=4
+2025-11-07 20:15:10,908 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 20:15:10,909 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 20:15:12,828 | INFO | BLE notification: value=4
+2025-11-07 20:15:12,830 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 20:15:12,830 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 20:15:14,806 | INFO | BLE notification: value=4
+2025-11-07 20:15:14,806 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 20:15:14,807 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 20:15:16,908 | INFO | BLE notification: value=4
+2025-11-07 20:15:16,909 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 20:15:16,910 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 20:15:18,842 | INFO | BLE notification: value=4
+2025-11-07 20:15:18,846 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 20:15:18,846 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 20:15:20,806 | INFO | BLE notification: value=4
+2025-11-07 20:15:20,807 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 20:15:20,807 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 20:15:22,907 | INFO | BLE notification: value=4
+2025-11-07 20:15:22,907 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 20:15:22,908 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 20:15:24,824 | INFO | BLE notification: value=4
+2025-11-07 20:15:24,825 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 20:15:24,825 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 20:15:26,805 | INFO | BLE notification: value=4
+2025-11-07 20:15:26,806 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 20:15:26,807 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 20:15:28,906 | INFO | BLE notification: value=4
+2025-11-07 20:15:28,906 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 20:15:28,907 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 20:15:30,824 | INFO | BLE notification: value=4
+2025-11-07 20:15:30,825 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 20:15:30,825 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 20:15:31,671 | INFO | Logged into Spotify as Ashen
+2025-11-07 20:15:32,805 | INFO | BLE notification: value=4
+2025-11-07 20:15:32,805 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 20:15:32,806 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 20:15:34,907 | INFO | BLE notification: value=4
+2025-11-07 20:15:34,909 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 20:15:34,909 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 20:15:36,826 | INFO | BLE notification: value=4
+2025-11-07 20:15:36,828 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 20:15:36,828 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 20:15:38,807 | INFO | BLE notification: value=4
+2025-11-07 20:15:38,809 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 20:15:38,809 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 20:15:40,906 | INFO | BLE notification: value=4
+2025-11-07 20:15:40,907 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 20:15:40,907 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 20:15:50,058 | INFO | Loaded 2 tracks from playlist 3Ib7ktwotnOXCWbDypieVy
+2025-11-07 20:15:50,059 | INFO | Started mood analysis using Track Analysis API
+2025-11-07 20:15:51,489 | INFO | Request #1 | 'Blinding Lights' by The Weeknd | Status: 403 | Time: 1.43s
+2025-11-07 20:15:51,490 | WARNING | Skipped 'Blinding Lights' (403)
+2025-11-07 20:15:59,309 | INFO | Request #2 | 'blue' by yung kai | Status: 403 | Time: 1.82s
+2025-11-07 20:15:59,309 | WARNING | Skipped 'blue' (403)
+2025-11-07 20:16:05,310 | INFO | API Summary: 2 requests, 0 success, 0 rate-limit hits, avg time 0.00s
+2025-11-07 20:16:05,339 | INFO | Scanning for BLE device 'XIAO_Sense'
+2025-11-07 20:16:05,640 | INFO | Found BLE device XIAO_Sense at C6:14:45:98:E8:89
+2025-11-07 20:16:07,911 | INFO | Connected to BLE device
+2025-11-07 20:16:08,025 | INFO | Started BLE notifications
+2025-11-07 20:16:08,145 | INFO | Started listening for BLE mood data
+2025-11-07 20:16:09,827 | INFO | BLE notification: value=4
+2025-11-07 20:16:09,829 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-07 20:16:09,831 | WARNING | No songs found for mood 'Calm'.
+2025-11-07 20:16:09,944 | INFO | Sent 0x04 to stop BLE notifications after displaying mood.
