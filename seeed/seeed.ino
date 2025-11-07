@@ -1,11 +1,11 @@
 #include <ArduinoBLE.h>
-#include <Wire.h>
-#include "MAX30105.h"
-#include "heartRate.h"
+//#include <Wire.h>
+//#include "MAX30105.h"
+//#include "heartRate.h"
 
-MAX30105 particleSensor;
+//MAX30105 particleSensor;
 
-//#define DEBUG 1
+#define DEBUG 1
 
 #ifdef DEBUG
   #define DEBUG_PRINT(x)   Serial.print(x)
@@ -40,28 +40,33 @@ long lastBeat = 0; //Time at which the last beat occurred
 float beatsPerMinute;
 int beatAvg;
 
+int rates_gsr[RATE_SIZE]; //Array of gsr readings
 const int GSR_PIN = A0;
-float gsrFiltered = 0.0;
-float gsrAlpha = 0.1;
+int gsrAvg;
+int rateSpot_gsr = 0;
+//float gsrFiltered = 0.0;
+//float gsrAlpha = 0.1;
 
 bool sendingEnabled = false;
 unsigned long previousMillis = 0;
 const unsigned long interval = 2000;
-char lastMessage[64] = "Hello from XIAO Sense!";
-char received[64];
+//char lastMessage[64] = "Hello from XIAO Sense!";
+byte sent = 0x05;
+byte received;
 
 void setup() {
-  pinMode (P0_13, OUTPUT);
-  Battery_charge();
+  //pinMode (P0_13, OUTPUT);
+  //Battery_charge();
 
-  analogReadResolution(10);
+  //analogReadResolution(10);
 
   #ifdef DEBUG
-    Serial.begin(115200);
+    Serial.begin(9600);
     while (!Serial);
   #endif
 
   // Initialize MAX30105 sensor
+  /**
   if (!particleSensor.begin(Wire, I2C_SPEED_FAST)) //Use default I2C port, 400kHz speed
   {
     Serial.println("MAX30105 was not found. Please check wiring/power. ");
@@ -73,6 +78,7 @@ void setup() {
   particleSensor.setPulseAmplitudeRed(0x0A);
   particleSensor.setPulseAmplitudeGreen(0);
   particleSensor.enableDIETEMPRDY();
+  **/
 
   // Initialize BLE
   if (!BLE.begin()) while (1);
@@ -83,18 +89,19 @@ void setup() {
   BLE.addService(myService);
   BLE.advertise();
 
-  DEBUG_PRINTLN("BLE started, advertising as XIAO_Sense");
+  //DEBUG_PRINTLN("BLE started, advertising as XIAO_Sense");
 }
 
 void loop() {
-  checkBatteryStatus();
-
+  //checkBatteryStatus();
+  /**
   if (isCharging) {
     DEBUG_PRINTLN("Charging in progress, skipping operations...");
     delay(1000);
     return;
   }
-
+  **/
+  BLE_rssi();
   BLEDevice central = BLE.central();
 
   if (central) {
@@ -108,32 +115,36 @@ void loop() {
       if (sendingEnabled && currentMillis - previousMillis >= interval) {
         previousMillis = currentMillis;
 
-        Heartbeat_sensor();
-        GSR_sensor();
-        Temp_sensor();
+        //Heartbeat_sensor();
+        //GSR_sensor();
+        //Temp_sensor();
         //Mood_detection
+        /**
         snprintf(lastMessage, sizeof(lastMessage),
                  "HR: %.1f bpm | Avg: %d | GSR: %.1f | Temp: %.2f°C",
                  beatsPerMinute, beatAvg, gsrFiltered, temperature);
-
-        txChar.writeValue(lastMessage);
-        DEBUG_PRINTLN(lastMessage);
+        **/
+       //snprintf(lastMessage, sizeof(lastMessage), "Jesica");
+        txChar.writeValue(sent); //mood is sent here
+        DEBUG_PRINTLN(sent);
       }
 
       // Handle BLE RX commands
       if (rxChar.written()) {
+        rxChar.readValue(&received, 1);
+
         DEBUG_PRINT("Received command: ");
         DEBUG_PRINTLN(received);
 
-        if (received == "start" || received == "resume") {
+        if (received == 0x01 || received == 0x02) {
           sendingEnabled = true;
           DEBUG_PRINTLN("Sending started/resumed.");
         } 
-        else if (received == "retry") {
-          txChar.writeValue(lastMessage);
+        else if (received == 0x03) {
+          //txChar.writeValue(lastMessage);
           DEBUG_PRINTLN("Retried last message.");
         } 
-        else if (received == "stop") {
+        else if (received == 0x04) {
           sendingEnabled = false;
           DEBUG_PRINTLN("Stopped sending.");
         } 
@@ -147,6 +158,7 @@ void loop() {
   }
 }
 
+/**
 void GSR_sensor() {
   static bool calibrated = false;
   static int sampleCount = 0;
@@ -154,7 +166,7 @@ void GSR_sensor() {
   static int sum = 0;
 
   unsigned long currentMillis = millis();
-
+  /**
   if (!calibrated) {
     if (currentMillis - prevMillis >= 2) {
       prevMillis = currentMillis;
@@ -169,8 +181,17 @@ void GSR_sensor() {
       }
     }
   } else {
-    int raw = analogRead(GSR_PIN);
-    gsrFiltered += gsrAlpha * (raw - gsrFiltered);
+
+  int raw = analogRead(GSR_PIN);
+  if(raw >= 0) {
+    rates_gsr[rateSpot_gsr] += analogRead(GSR_PIN); 
+    rateSpot_gsr %= RATE_SIZE;
+
+    for(int i = 0; i < RATE_SIZE; i++) {
+      int raw = analogRead(GSR_PIN);
+      rates_gsr[i] += raw; 
+  }
+    gsrAvg /= RATE_SIZE;
   }
 }
 
@@ -235,6 +256,7 @@ void checkBatteryStatus() {
     }
   }
 }
+**/
 
 void BLE_rssi() {
   DEBUG_PRINTLN(BLE.rssi());
