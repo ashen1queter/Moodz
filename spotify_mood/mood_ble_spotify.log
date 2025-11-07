@@ -1,0 +1,17 @@
+2025-11-07 19:43:22,049 | INFO | Logged into Spotify as Jesica, I understand that I approached you in a manner that forced you to block me, I know its not at all safe conversing with a stranger, but if you just give me a chance
+2025-11-07 19:43:44,710 | INFO | Loaded 7 tracks from playlist 3Ib7ktwotnOXCWbDypieVy
+2025-11-07 19:43:44,711 | INFO | Started mood analysis using Track Analysis API
+2025-11-07 19:43:56,429 | INFO | Request #1 | 'Blinding Lights' by The Weeknd | Status: 200 | Time: 11.72s
+2025-11-07 19:43:56,429 | INFO | \u2192 Classified 'Blinding Lights' as Calm (happiness=33, energy=73)
+2025-11-07 19:44:04,432 | INFO | Request #2 | 'blue' by yung kai | Status: 200 | Time: 2.00s
+2025-11-07 19:44:04,433 | INFO | \u2192 Classified 'blue' as Calm (happiness=59, energy=32)
+2025-11-07 19:44:11,622 | INFO | Request #3 | 'death bed (coffee for your head)' by Powfu | Status: 429 | Time: 1.19s
+2025-11-07 19:44:11,622 | WARNING | Rate limit hit on request #3 ('death bed (coffee for your head)') — waiting 30s
+2025-11-07 19:44:42,780 | INFO | Request #4 | 'Die With A Smile' by Lady Gaga | Status: 429 | Time: 1.16s
+2025-11-07 19:44:42,781 | WARNING | Rate limit hit on request #4 ('Die With A Smile') — waiting 30s
+2025-11-07 19:52:00,149 | INFO | Logged into Spotify as Jesica, I understand that I approached you in a manner that forced you to block me, I know its not at all safe conversing with a stranger, but if you just give me a chance
+2025-11-07 19:52:07,042 | INFO | Loaded 2 tracks from playlist 3Ib7ktwotnOXCWbDypieVy
+2025-11-07 19:52:19,689 | INFO | Request for 'Blinding Lights' | Status: 200
+2025-11-07 19:52:19,690 | INFO | Blinding Lights \u2192 Calm (33, 73)
+2025-11-07 19:52:22,240 | INFO | Request for 'blue' | Status: 200
+2025-11-07 19:52:22,241 | INFO | blue \u2192 Calm (59, 32)

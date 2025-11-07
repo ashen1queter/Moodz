@@ -51,7 +51,7 @@ bool sendingEnabled = false;
 unsigned long previousMillis = 0;
 const unsigned long interval = 2000;
 //char lastMessage[64] = "Hello from XIAO Sense!";
-byte sent = 0x05;
+byte sent = 0x04;
 byte received;
 
 void setup() {
