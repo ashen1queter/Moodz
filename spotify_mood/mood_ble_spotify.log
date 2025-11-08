@@ -1136,3 +1136,151 @@ NameError: name 'RX_UUID' is not defined
 2025-11-08 15:56:04,250 | INFO | Request #2 | 'blue' by yung kai | Status: 429 | Time: 0.98s
 2025-11-08 15:56:04,250 | WARNING | Rate limit hit on request #2 ('blue')
 2025-11-08 15:56:04,250 | INFO | API Summary: 2 requests, 0 success, 2 rate-limit hits, avg time 0.00s
+2025-11-08 16:20:16,567 | INFO | Logged into Spotify as Ashen
+2025-11-08 16:20:49,388 | INFO | Loaded 2 tracks from playlist 3Ib7ktwotnOXCWbDypieVy
+2025-11-08 16:20:49,391 | INFO | Started mood analysis using Track Analysis API
+2025-11-08 16:20:50,361 | INFO | Request #1 | 'Blinding Lights' by The Weeknd | Status: 429 | Time: 0.97s
+2025-11-08 16:20:50,362 | WARNING | Rate limit hit on request #1 ('Blinding Lights')
+2025-11-08 16:20:51,304 | INFO | Request #2 | 'blue' by yung kai | Status: 429 | Time: 0.94s
+2025-11-08 16:20:51,305 | WARNING | Rate limit hit on request #2 ('blue')
+2025-11-08 16:20:51,305 | INFO | API Summary: 2 requests, 0 success, 2 rate-limit hits, avg time 0.00s
+2025-11-08 16:28:27,128 | INFO | Logged into Spotify as Ashen
+2025-11-08 16:28:32,385 | INFO | Loaded 2 tracks from playlist 3Ib7ktwotnOXCWbDypieVy
+2025-11-08 16:28:32,388 | INFO | Started mood analysis using Track Analysis API
+2025-11-08 16:28:33,378 | INFO | Request #1 | 'Blinding Lights' by The Weeknd | Status: 429 | Time: 0.99s
+2025-11-08 16:28:33,379 | WARNING | Rate limit hit on request #1 ('Blinding Lights')
+2025-11-08 16:28:34,319 | INFO | Request #2 | 'blue' by yung kai | Status: 429 | Time: 0.94s
+2025-11-08 16:28:34,319 | WARNING | Rate limit hit on request #2 ('blue')
+2025-11-08 16:28:34,319 | INFO | API Summary: 2 requests, 0 success, 2 rate-limit hits, avg time 0.00s
+2025-11-08 16:33:29,763 | INFO | Logged into Spotify as Ashen
+2025-11-08 16:33:47,486 | INFO | Loaded 2 tracks from playlist 3Ib7ktwotnOXCWbDypieVy
+2025-11-08 16:33:47,489 | INFO | Started mood analysis using Track Analysis API
+2025-11-08 16:33:48,591 | INFO | Request #1 | 'Blinding Lights' by The Weeknd | Status: 429 | Time: 1.10s
+2025-11-08 16:33:48,591 | WARNING | Rate limit hit on request #1 ('Blinding Lights')
+2025-11-08 16:33:50,228 | INFO | Request #2 | 'blue' by yung kai | Status: 429 | Time: 1.64s
+2025-11-08 16:33:50,229 | WARNING | Rate limit hit on request #2 ('blue')
+2025-11-08 16:33:50,229 | INFO | API Summary: 2 requests, 0 success, 2 rate-limit hits, avg time 0.00s
+2025-11-08 16:36:27,059 | INFO | Logged into Spotify as Ashen
+2025-11-08 16:36:36,377 | INFO | Loaded 2 tracks from playlist 3Ib7ktwotnOXCWbDypieVy
+2025-11-08 16:36:36,379 | INFO | Started mood analysis using Track Analysis API
+2025-11-08 16:36:37,489 | INFO | Request #1 | 'Blinding Lights' by The Weeknd | Status: 429 | Time: 1.11s
+2025-11-08 16:36:37,490 | WARNING | Rate limit hit on request #1 ('Blinding Lights')
+2025-11-08 16:36:38,674 | INFO | Request #2 | 'blue' by yung kai | Status: 429 | Time: 1.18s
+2025-11-08 16:36:38,675 | WARNING | Rate limit hit on request #2 ('blue')
+2025-11-08 16:36:38,675 | INFO | API Summary: 2 requests, 0 success, 2 rate-limit hits, avg time 0.00s
+2025-11-08 16:39:06,875 | INFO | Program terminated manually
+2025-11-08 16:39:13,337 | INFO | Logged into Spotify as Ashen
+2025-11-08 16:39:38,660 | INFO | Loaded 2 tracks from playlist 3Ib7ktwotnOXCWbDypieVy
+2025-11-08 16:39:38,662 | INFO | Started mood analysis using Track Analysis API
+2025-11-08 16:39:39,723 | INFO | Request #1 | 'Blinding Lights' by The Weeknd | Status: 429 | Time: 1.06s
+2025-11-08 16:39:39,724 | WARNING | Rate limit hit on request #1 ('Blinding Lights')
+2025-11-08 16:39:40,963 | INFO | Request #2 | 'blue' by yung kai | Status: 429 | Time: 1.24s
+2025-11-08 16:39:40,964 | WARNING | Rate limit hit on request #2 ('blue')
+2025-11-08 16:39:40,964 | INFO | API Summary: 2 requests, 0 success, 2 rate-limit hits, avg time 0.00s
+2025-11-08 16:42:40,001 | INFO | Program terminated manually
+2025-11-08 16:42:49,345 | INFO | Logged into Spotify as Ashen
+2025-11-08 16:43:16,874 | INFO | Loaded 2 tracks from playlist 3Ib7ktwotnOXCWbDypieVy
+2025-11-08 16:43:16,876 | INFO | Started mood analysis using Track Analysis API
+2025-11-08 16:43:18,102 | INFO | Request #1 | 'Blinding Lights' by The Weeknd | Status: 429 | Time: 1.23s
+2025-11-08 16:43:18,103 | WARNING | Rate limit hit on request #1 ('Blinding Lights')
+2025-11-08 16:43:19,491 | INFO | Request #2 | 'blue' by yung kai | Status: 429 | Time: 1.39s
+2025-11-08 16:43:19,491 | WARNING | Rate limit hit on request #2 ('blue')
+2025-11-08 16:43:19,491 | INFO | API Summary: 2 requests, 0 success, 2 rate-limit hits, avg time 0.00s
+2025-11-08 16:44:55,732 | INFO | Program terminated manually
+2025-11-08 16:45:57,071 | INFO | Logged into Spotify as Ashen
+2025-11-08 16:45:59,302 | INFO | Loaded 2 tracks from playlist 3Ib7ktwotnOXCWbDypieVy
+2025-11-08 16:45:59,309 | INFO | Started mood analysis using Track Analysis API
+2025-11-08 16:46:01,027 | INFO | Request #1 | 'Blinding Lights' by The Weeknd | Status: 429 | Time: 1.72s
+2025-11-08 16:46:01,027 | WARNING | Rate limit hit on request #1 ('Blinding Lights')
+2025-11-08 16:46:03,078 | INFO | Request #2 | 'blue' by yung kai | Status: 429 | Time: 2.05s
+2025-11-08 16:46:03,078 | WARNING | Rate limit hit on request #2 ('blue')
+2025-11-08 16:46:03,078 | INFO | API Summary: 2 requests, 0 success, 2 rate-limit hits, avg time 0.00s
+2025-11-08 16:46:25,966 | INFO | Program terminated manually
+2025-11-08 16:47:18,049 | INFO | Logged into Spotify as Ashen
+2025-11-08 16:47:20,251 | INFO | Loaded 2 tracks from playlist 3Ib7ktwotnOXCWbDypieVy
+2025-11-08 16:47:20,253 | INFO | Started mood analysis using Track Analysis API
+2025-11-08 16:47:21,228 | INFO | Request #1 | 'Blinding Lights' by The Weeknd | Status: 429 | Time: 0.97s
+2025-11-08 16:47:21,229 | WARNING | Rate limit hit on request #1 ('Blinding Lights')
+2025-11-08 16:47:22,260 | INFO | Request #2 | 'blue' by yung kai | Status: 429 | Time: 1.03s
+2025-11-08 16:47:22,260 | WARNING | Rate limit hit on request #2 ('blue')
+2025-11-08 16:47:22,260 | INFO | API Summary: 2 requests, 0 success, 2 rate-limit hits, avg time 0.00s
+2025-11-08 16:48:26,849 | INFO | Program terminated manually
+2025-11-08 16:48:35,502 | INFO | Logged into Spotify as Ashen
+2025-11-08 16:48:39,453 | INFO | Loaded 2 tracks from playlist 3Ib7ktwotnOXCWbDypieVy
+2025-11-08 16:48:39,453 | INFO | Started mood analysis using Track Analysis API
+2025-11-08 16:48:41,070 | INFO | Request #1 | 'Blinding Lights' by The Weeknd | Status: 429 | Time: 1.62s
+2025-11-08 16:48:41,070 | WARNING | Rate limit hit on request #1 ('Blinding Lights')
+2025-11-08 16:48:42,186 | INFO | Request #2 | 'blue' by yung kai | Status: 429 | Time: 1.12s
+2025-11-08 16:48:42,187 | WARNING | Rate limit hit on request #2 ('blue')
+2025-11-08 16:48:42,187 | INFO | API Summary: 2 requests, 0 success, 2 rate-limit hits, avg time 0.00s
+2025-11-08 16:48:59,362 | INFO | Program terminated manually
+2025-11-08 16:50:48,681 | INFO | Logged into Spotify as Ashen
+2025-11-08 16:50:50,611 | INFO | Loaded 2 tracks from playlist 3Ib7ktwotnOXCWbDypieVy
+2025-11-08 16:50:50,612 | INFO | Started mood analysis using Track Analysis API
+2025-11-08 16:50:51,588 | INFO | Request #1 | 'Blinding Lights' by The Weeknd | Status: 429 | Time: 0.98s
+2025-11-08 16:50:51,588 | WARNING | Rate limit hit on request #1 ('Blinding Lights')
+2025-11-08 16:50:52,540 | INFO | Request #2 | 'blue' by yung kai | Status: 429 | Time: 0.95s
+2025-11-08 16:50:52,541 | WARNING | Rate limit hit on request #2 ('blue')
+2025-11-08 16:50:52,541 | INFO | API Summary: 2 requests, 0 success, 2 rate-limit hits, avg time 0.00s
+2025-11-08 16:51:11,953 | INFO | Program terminated manually
+2025-11-08 16:53:05,038 | INFO | Logged into Spotify as Ashen
+2025-11-08 16:53:06,750 | INFO | Loaded 2 tracks from playlist 3Ib7ktwotnOXCWbDypieVy
+2025-11-08 16:53:06,751 | INFO | Started mood analysis using Track Analysis API
+2025-11-08 16:53:08,471 | INFO | Request #1 | 'Blinding Lights' by The Weeknd | Status: 429 | Time: 1.72s
+2025-11-08 16:53:08,471 | WARNING | Rate limit hit on request #1 ('Blinding Lights')
+2025-11-08 16:53:10,134 | INFO | Request #2 | 'blue' by yung kai | Status: 429 | Time: 1.66s
+2025-11-08 16:53:10,135 | WARNING | Rate limit hit on request #2 ('blue')
+2025-11-08 16:53:10,135 | INFO | API Summary: 2 requests, 0 success, 2 rate-limit hits, avg time 0.00s
+2025-11-08 16:55:00,578 | INFO | Logged into Spotify as Ashen
+2025-11-08 16:55:03,174 | INFO | Loaded 2 tracks from playlist 3Ib7ktwotnOXCWbDypieVy
+2025-11-08 16:55:03,177 | INFO | Started mood analysis using Track Analysis API
+2025-11-08 16:55:04,232 | INFO | Request #1 | 'Blinding Lights' by The Weeknd | Status: 429 | Time: 1.06s
+2025-11-08 16:55:04,233 | WARNING | Rate limit hit on request #1 ('Blinding Lights')
+2025-11-08 16:55:05,510 | INFO | Request #2 | 'blue' by yung kai | Status: 429 | Time: 1.28s
+2025-11-08 16:55:05,510 | WARNING | Rate limit hit on request #2 ('blue')
+2025-11-08 16:55:05,510 | INFO | API Summary: 2 requests, 0 success, 2 rate-limit hits, avg time 0.00s
+2025-11-08 16:55:54,779 | INFO | Program terminated manually
+2025-11-08 16:57:16,101 | INFO | Logged into Spotify as Ashen
+2025-11-08 16:57:18,134 | INFO | Loaded 2 tracks from playlist 3Ib7ktwotnOXCWbDypieVy
+2025-11-08 16:57:18,135 | INFO | Started mood analysis using Track Analysis API
+2025-11-08 16:57:19,443 | INFO | Request #1 | 'Blinding Lights' by The Weeknd | Status: 429 | Time: 1.31s
+2025-11-08 16:57:19,443 | WARNING | Rate limit hit on request #1 ('Blinding Lights')
+2025-11-08 16:57:20,923 | INFO | Request #2 | 'blue' by yung kai | Status: 429 | Time: 1.48s
+2025-11-08 16:57:20,923 | WARNING | Rate limit hit on request #2 ('blue')
+2025-11-08 16:57:20,923 | INFO | API Summary: 2 requests, 0 success, 2 rate-limit hits, avg time 0.00s
+2025-11-08 16:59:08,535 | INFO | Program terminated manually
+2025-11-08 16:59:15,917 | INFO | Logged into Spotify as Ashen
+2025-11-08 16:59:17,255 | INFO | Loaded 2 tracks from playlist 3Ib7ktwotnOXCWbDypieVy
+2025-11-08 16:59:17,258 | INFO | Started mood analysis using Track Analysis API
+2025-11-08 16:59:18,280 | INFO | Request #1 | 'Blinding Lights' by The Weeknd | Status: 429 | Time: 1.02s
+2025-11-08 16:59:18,280 | WARNING | Rate limit hit on request #1 ('Blinding Lights')
+2025-11-08 16:59:19,239 | INFO | Request #2 | 'blue' by yung kai | Status: 429 | Time: 0.96s
+2025-11-08 16:59:19,239 | WARNING | Rate limit hit on request #2 ('blue')
+2025-11-08 16:59:19,240 | INFO | API Summary: 2 requests, 0 success, 2 rate-limit hits, avg time 0.00s
+2025-11-08 17:12:37,628 | INFO | Program terminated manually
+2025-11-08 17:12:45,442 | INFO | Logged into Spotify as Ashen
+2025-11-08 17:12:53,672 | INFO | Loaded 2 tracks from playlist 3Ib7ktwotnOXCWbDypieVy
+2025-11-08 17:12:53,675 | INFO | Started mood analysis using Track Analysis API
+2025-11-08 17:12:54,691 | INFO | Request #1 | 'Blinding Lights' by The Weeknd | Status: 429 | Time: 1.02s
+2025-11-08 17:12:54,691 | WARNING | Rate limit hit on request #1 ('Blinding Lights')
+2025-11-08 17:12:55,861 | INFO | Request #2 | 'blue' by yung kai | Status: 429 | Time: 1.17s
+2025-11-08 17:12:55,861 | WARNING | Rate limit hit on request #2 ('blue')
+2025-11-08 17:12:55,861 | INFO | API Summary: 2 requests, 0 success, 2 rate-limit hits, avg time 0.00s
+2025-11-08 17:13:08,411 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-08 17:13:08,415 | WARNING | No songs found for mood 'Calm'.
+2025-11-08 17:13:08,420 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-08 17:13:08,423 | WARNING | No songs found for mood 'Calm'.
+2025-11-08 17:13:08,426 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-08 17:13:08,427 | WARNING | No songs found for mood 'Calm'.
+2025-11-08 17:13:08,529 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-08 17:13:08,530 | WARNING | No songs found for mood 'Calm'.
+2025-11-08 17:13:08,531 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-08 17:13:08,532 | WARNING | No songs found for mood 'Calm'.
+2025-11-08 17:13:08,533 | INFO | BLE mood value 4 \u2192 Calm
+2025-11-08 17:13:08,533 | WARNING | No songs found for mood 'Calm'.
+2025-11-08 17:13:08,534 | INFO | Sent 0x04 to stop BLE notifications after displaying mood.
+2025-11-08 17:13:08,652 | INFO | Sent 0x04 to stop BLE notifications after displaying mood.
+2025-11-08 17:13:08,770 | INFO | Sent 0x04 to stop BLE notifications after displaying mood.
+2025-11-08 17:13:08,891 | INFO | Sent 0x04 to stop BLE notifications after displaying mood.
+2025-11-08 17:13:09,010 | INFO | Sent 0x04 to stop BLE notifications after displaying mood.
+2025-11-08 17:13:09,130 | INFO | Sent 0x04 to stop BLE notifications after displaying mood.

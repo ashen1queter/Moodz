@@ -99,6 +99,7 @@ int rateSpot_gsr = 0;
 
 bool sendingEnabled = false;
 bool sendinghashEnabled = false;
+bool hashSent = false;
 
 unsigned long previousMillis = 0;
 const unsigned long interval = 2000;
@@ -220,7 +221,10 @@ void loop() {
       }
       **/
       //}
-
+      if(sendingEnabled && hashSent) {
+        txChar.writeValue(sent); //mood is sent here //txChar.writeValue(ramData.moods[i].hash, 32);
+        DEBUG_PRINTLN(sent);
+      }
       // Handle BLE RX commands
       if (rxChar.written()) {
         rxChar.readValue(&received, 1);
@@ -231,7 +235,7 @@ void loop() {
         if (received == 0x01 || received == 0x02) {
           sendingEnabled = true;
           DEBUG_PRINTLN("Sending started/resumed.");
-        } 
+        }
         else if (received == 0x03) {
           //txChar.writeValue(lastMessage);
           DEBUG_PRINTLN("Retried last message.");
@@ -254,14 +258,16 @@ void loop() {
             DEBUG_PRINTLN(currentHashIndex);
           } else {
             sendinghashEnabled = false;
+            hashSent = true;
             DEBUG_PRINTLN("All hashes sent. Sync complete.");
+            DEBUG_PRINTLN(hashSent);
           }
         }
         else {
           DEBUG_PRINTLN("Unknown command.");
         }
       }
-      DEBUG_PRINTLN("Disconnected.");
+      //DEBUG_PRINTLN("Disconnected.");
     }
   }
 }
