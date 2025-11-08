@@ -1041,3 +1041,98 @@ TypeError: handle_notify() takes 1 positional argument but 2 were given
 2025-11-07 20:35:09,028 | INFO | Suggested: blue — yung kai
 2025-11-07 20:35:09,032 | INFO | Started listening for BLE mood data
 2025-11-07 20:35:09,143 | INFO | Sent 0x04 to stop BLE notifications after displaying mood.
+2025-11-08 15:20:47,605 | INFO | Logged into Spotify as Ashen
+2025-11-08 15:21:08,626 | INFO | Loaded 2 tracks from playlist 3Ib7ktwotnOXCWbDypieVy
+2025-11-08 15:21:08,628 | INFO | Started mood analysis using Track Analysis API
+2025-11-08 15:21:10,906 | INFO | Request #1 | 'Blinding Lights' by The Weeknd | Status: 200 | Time: 2.28s
+2025-11-08 15:21:10,907 | INFO | \u2192 Classified 'Blinding Lights' as Calm (happiness=33, energy=73)
+2025-11-08 15:21:17,801 | INFO | Request #2 | 'blue' by yung kai | Status: 429 | Time: 0.89s
+2025-11-08 15:21:17,802 | WARNING | Rate limit hit on request #2 ('blue') — skipping
+2025-11-08 15:21:17,803 | INFO | API Summary: 2 requests, 1 success, 1 rate-limit hits, avg time 3.17s
+2025-11-08 15:21:17,812 | INFO | Calm \u2192 Blinding Lights — The Weeknd
+2025-11-08 15:21:17,816 | INFO | Scanning for BLE device 'XIAO_Sense'
+2025-11-08 15:21:18,800 | INFO | Found BLE device XIAO_Sense at C6:14:45:98:E8:89
+2025-11-08 15:21:21,119 | INFO | Connected to BLE device
+2025-11-08 15:21:21,218 | INFO | Started BLE notifications
+2025-11-08 15:21:21,337 | INFO | Started listening for BLE mood data
+2025-11-08 15:34:05,226 | INFO | Logged into Spotify as Ashen
+2025-11-08 15:34:17,063 | INFO | Loaded 2 tracks from playlist 3Ib7ktwotnOXCWbDypieVy
+2025-11-08 15:37:02,729 | INFO | Logged into Spotify as Ashen
+2025-11-08 15:37:04,269 | INFO | Loaded 2 tracks from playlist 3Ib7ktwotnOXCWbDypieVy
+2025-11-08 15:37:04,270 | INFO | Started mood analysis using Track Analysis API
+2025-11-08 15:37:05,153 | INFO | Request #1 | 'Blinding Lights' by The Weeknd | Status: 429 | Time: 0.88s
+2025-11-08 15:37:05,153 | WARNING | Rate limit hit on request #1 ('Blinding Lights') — skipping
+2025-11-08 15:37:06,001 | INFO | Request #2 | 'blue' by yung kai | Status: 429 | Time: 0.85s
+2025-11-08 15:37:06,001 | WARNING | Rate limit hit on request #2 ('blue') — skipping
+2025-11-08 15:37:06,001 | INFO | API Summary: 2 requests, 0 success, 2 rate-limit hits, avg time 0.00s
+2025-11-08 15:37:06,006 | INFO | Scanning for BLE device 'XIAO_Sense'
+2025-11-08 15:37:06,867 | INFO | Found BLE device XIAO_Sense at C6:14:45:98:E8:89
+2025-11-08 15:37:09,204 | INFO | Connected to BLE device
+2025-11-08 15:37:09,318 | INFO | Started BLE notifications
+2025-11-08 15:37:09,438 | INFO | Started listening for BLE mood data
+2025-11-08 15:37:16,085 | INFO | Program terminated manually
+2025-11-08 15:43:44,859 | INFO | Logged into Spotify as Ashen
+2025-11-08 15:43:53,666 | INFO | Loaded 2 tracks from playlist 3Ib7ktwotnOXCWbDypieVy
+2025-11-08 15:43:53,667 | INFO | Started mood analysis using Track Analysis API
+2025-11-08 15:43:54,716 | INFO | Request #1 | 'Blinding Lights' by The Weeknd | Status: 429 | Time: 1.05s
+2025-11-08 15:43:54,716 | WARNING | Rate limit hit on request #1 ('Blinding Lights') — skipping
+2025-11-08 15:43:55,666 | INFO | Request #2 | 'blue' by yung kai | Status: 429 | Time: 0.95s
+2025-11-08 15:43:55,666 | WARNING | Rate limit hit on request #2 ('blue') — skipping
+2025-11-08 15:43:55,666 | INFO | API Summary: 2 requests, 0 success, 2 rate-limit hits, avg time 0.00s
+2025-11-08 15:43:55,676 | INFO | Scanning for BLE device 'XIAO_Sense'
+2025-11-08 15:43:56,507 | INFO | Found BLE device XIAO_Sense at C6:14:45:98:E8:89
+2025-11-08 15:43:58,869 | INFO | Connected to BLE device
+2025-11-08 15:43:58,985 | INFO | Started BLE notifications
+2025-11-08 15:43:59,225 | INFO | BLE notification: value=154
+2025-11-08 15:43:59,225 | WARNING | Unknown BLE value received: 154
+2025-11-08 15:44:09,229 | INFO | Started listening for BLE mood data
+2025-11-08 15:44:17,441 | INFO | Program terminated manually
+2025-11-08 15:46:29,125 | ERROR | Task exception was never retrieved
+future: <Task finished name='Task-3' coro=<send_ack() done, defined at c:\Users\HI\Desktop\Moodz\spotify_mood\venv\maybe.py:73> exception=NameError("name 'RX_UUID' is not defined")>
+Traceback (most recent call last):
+  File "c:\Users\HI\Desktop\Moodz\spotify_mood\venv\maybe.py", line 76, in send_ack
+    await client.write_gatt_char(RX_UUID, bytes([0x06]))
+                                 ^^^^^^^
+NameError: name 'RX_UUID' is not defined
+2025-11-08 15:49:23,829 | INFO | Logged into Spotify as Ashen
+2025-11-08 15:49:33,426 | INFO | Loaded 2 tracks from playlist 3Ib7ktwotnOXCWbDypieVy
+2025-11-08 15:49:33,427 | INFO | Started mood analysis using Track Analysis API
+2025-11-08 15:49:34,308 | INFO | Request #1 | 'Blinding Lights' by The Weeknd | Status: 429 | Time: 0.88s
+2025-11-08 15:49:34,309 | WARNING | Rate limit hit on request #1 ('Blinding Lights')
+2025-11-08 15:49:35,385 | INFO | Request #2 | 'blue' by yung kai | Status: 429 | Time: 1.08s
+2025-11-08 15:49:35,386 | WARNING | Rate limit hit on request #2 ('blue')
+2025-11-08 15:49:35,386 | INFO | API Summary: 2 requests, 0 success, 2 rate-limit hits, avg time 0.00s
+2025-11-08 15:51:16,439 | INFO | Program terminated manually
+2025-11-08 15:51:22,077 | INFO | Logged into Spotify as Ashen
+2025-11-08 15:51:24,500 | INFO | Loaded 2 tracks from playlist 3Ib7ktwotnOXCWbDypieVy
+2025-11-08 15:51:24,501 | INFO | Started mood analysis using Track Analysis API
+2025-11-08 15:51:25,456 | INFO | Request #1 | 'Blinding Lights' by The Weeknd | Status: 429 | Time: 0.95s
+2025-11-08 15:51:25,456 | WARNING | Rate limit hit on request #1 ('Blinding Lights')
+2025-11-08 15:51:26,400 | INFO | Request #2 | 'blue' by yung kai | Status: 429 | Time: 0.94s
+2025-11-08 15:51:26,400 | WARNING | Rate limit hit on request #2 ('blue')
+2025-11-08 15:51:26,401 | INFO | API Summary: 2 requests, 0 success, 2 rate-limit hits, avg time 0.00s
+2025-11-08 15:52:47,457 | INFO | Program terminated manually
+2025-11-08 15:53:46,985 | INFO | Logged into Spotify as Ashen
+2025-11-08 15:54:07,904 | INFO | Loaded 2 tracks from playlist 3Ib7ktwotnOXCWbDypieVy
+2025-11-08 15:54:07,906 | INFO | Started mood analysis using Track Analysis API
+2025-11-08 15:54:08,808 | INFO | Request #1 | 'Blinding Lights' by The Weeknd | Status: 429 | Time: 0.90s
+2025-11-08 15:54:08,808 | WARNING | Rate limit hit on request #1 ('Blinding Lights')
+2025-11-08 15:54:09,836 | INFO | Request #2 | 'blue' by yung kai | Status: 429 | Time: 1.03s
+2025-11-08 15:54:09,836 | WARNING | Rate limit hit on request #2 ('blue')
+2025-11-08 15:54:09,836 | INFO | API Summary: 2 requests, 0 success, 2 rate-limit hits, avg time 0.00s
+2025-11-08 15:55:32,632 | INFO | Logged into Spotify as Ashen
+2025-11-08 15:55:34,223 | INFO | Loaded 2 tracks from playlist 3Ib7ktwotnOXCWbDypieVy
+2025-11-08 15:55:34,226 | INFO | Started mood analysis using Track Analysis API
+2025-11-08 15:55:35,330 | INFO | Request #1 | 'Blinding Lights' by The Weeknd | Status: 429 | Time: 1.10s
+2025-11-08 15:55:35,330 | WARNING | Rate limit hit on request #1 ('Blinding Lights')
+2025-11-08 15:55:36,530 | INFO | Request #2 | 'blue' by yung kai | Status: 429 | Time: 1.20s
+2025-11-08 15:55:36,530 | WARNING | Rate limit hit on request #2 ('blue')
+2025-11-08 15:55:36,530 | INFO | API Summary: 2 requests, 0 success, 2 rate-limit hits, avg time 0.00s
+2025-11-08 15:55:59,958 | INFO | Logged into Spotify as Ashen
+2025-11-08 15:56:02,319 | INFO | Loaded 2 tracks from playlist 3Ib7ktwotnOXCWbDypieVy
+2025-11-08 15:56:02,321 | INFO | Started mood analysis using Track Analysis API
+2025-11-08 15:56:03,270 | INFO | Request #1 | 'Blinding Lights' by The Weeknd | Status: 429 | Time: 0.95s
+2025-11-08 15:56:03,270 | WARNING | Rate limit hit on request #1 ('Blinding Lights')
+2025-11-08 15:56:04,250 | INFO | Request #2 | 'blue' by yung kai | Status: 429 | Time: 0.98s
+2025-11-08 15:56:04,250 | WARNING | Rate limit hit on request #2 ('blue')
+2025-11-08 15:56:04,250 | INFO | API Summary: 2 requests, 0 success, 2 rate-limit hits, avg time 0.00s

@@ -193,8 +193,8 @@ void loop() {
       unsigned long currentMillis = millis();
 
       // Periodic BLE sending
-      if (sendingEnabled && currentMillis - previousMillis >= interval) {
-        previousMillis = currentMillis;
+      //if (sendingEnabled && currentMillis - previousMillis >= interval) {
+        //previousMillis = currentMillis;
 
         //Heartbeat_sensor();
         //GSR_sensor();
@@ -206,8 +206,9 @@ void loop() {
                  beatsPerMinute, beatAvg, gsrFiltered, temperature);
         **/
        //snprintf(lastMessage, sizeof(lastMessage), "Jesica");
-        txChar.writeValue(sent); //mood is sent here //txChar.writeValue(ramData.moods[i].hash, 32);
-        DEBUG_PRINTLN(sent);
+        
+        //txChar.writeValue(sent); //mood is sent here //txChar.writeValue(ramData.moods[i].hash, 32);
+        //DEBUG_PRINTLN(sent);
 
         /**
         if(sendinghashEnabled) {
@@ -218,6 +219,7 @@ void loop() {
         DEBUG_PRINTLN("All hashes sent over BLE");
       }
       **/
+      //}
 
       // Handle BLE RX commands
       if (rxChar.written()) {
@@ -262,7 +264,6 @@ void loop() {
       DEBUG_PRINTLN("Disconnected.");
     }
   }
-}
 }
 
 /**
@@ -481,15 +482,15 @@ void loadCalibrationFromFlash() {
   if (calib.calib_done) {
     DEBUG_PRINTLN(F("Loaded calibration from flash:"));
 
-    DEBUG_PRINT(F("  Heartbeat: "));
+    DEBUG_PRINT(F("Heartbeat: "));
     Serial.print(calib.heartbeat, 2);
     Serial.println();
 
-    DEBUG_PRINT(F("  Temperature: "));
+    DEBUG_PRINT(F("Temperature: "));
     Serial.print(calib.temperature, 2);
     Serial.println();
 
-    DEBUG_PRINT(F("  GSR: "));
+    DEBUG_PRINT(F("GSR: "));
     Serial.print(calib.gsr, 2);
     Serial.println();
   } 
