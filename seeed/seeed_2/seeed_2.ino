@@ -306,7 +306,8 @@ void loop() {
         else if (received == 0x0A) {
           DEBUG_PRINTLN("Ok bye!");
           sleep_modez = true;
-          BLE.disconnect();   
+          BLE.disconnect(); 
+          BLE.stopAdvertise();  
         }
         else if (received == 0x0C) {
           calibrationz();
@@ -588,53 +589,55 @@ void loadCalibrationFromFlash() {
 void deep_sleep() {
   DEBUG_PRINTLN("Good night!");
   blue();
-  delay(10000);
-  while (sleep_modez) {
-    central = BLE.central();
-    sd_app_evt_wait();
+  BLE.advertise();
 
-    if (central) {
-      red();
+  while (sleep_modez) {
+    sd_app_evt_wait();
+    central = BLE.central();
+
+    if (central && central.connected()) {
       DEBUG_PRINT("Connected to: ");
       DEBUG_PRINTLN(central.address());
+
       while (central.connected()) {
+        //red();
         if (rxChar.written()) {
-            rxChar.readValue(&received, 1);
+          rxChar.readValue(&received, 1);
 
-            DEBUG_PRINT("Received command: ");
-            DEBUG_PRINTLN(received);
+          DEBUG_PRINT("Received command: ");
+          DEBUG_PRINTLN(received);
 
-            if (received == 0x01) {
+          if (received == 0x01) {
             sleep_modez = false;
-            currentHashIndex = 0;
             sendinghashEnabled = true;
+            currentHashIndex = 0;
 
             ramData.magic = 0xDEADBEEF;
-            //ramData.hashz_flashz_done = false;
-
             hashz_flashz("happy", &ramData.moods[0]);
             hashz_flashz("sad", &ramData.moods[1]);
             hashz_flashz("calm", &ramData.moods[2]);
             hashz_flashz("energetic", &ramData.moods[3]);
-
-            //ramData.hashz_flashz_done = true;
-
             saveToFlash();
 
             DEBUG_PRINTLN(F("New mood hashes generated and saved to flash."));
             loadFromFlash();
-            DEBUG_PRINTLN("Sending started/resumed.");
           }
-            else if (received == 0x0C) {
-              sleep_modez = false;
-              calibrationz();
-              txChar.writeValue(&calib_done, 1);
-              DEBUG_PRINTLN("Calibration complete");
-              plsHashout = true;
-            }
-            break;
+          else if (received == 0x0C) {
+            sleep_modez = false;
+            calibrationz();
+            txChar.writeValue(&calib_done, 1);
+            DEBUG_PRINTLN("Calibration complete");
+            plsHashout = true;
           }
+          else if (received == 0x0A) {
+            DEBUG_PRINTLN("Ok bye!");
+            sleep_modez = true;
+            BLE.disconnect();
+            BLE.stopAdvertise();
+          }
+          break;
         }
       }
     }
   }
+}
