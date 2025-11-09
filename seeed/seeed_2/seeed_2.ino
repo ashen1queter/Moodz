@@ -78,8 +78,12 @@ void deep_sleep();
 bool isCharging = false;
 bool isCharged = false;
 
+bool plsHashout = false; 
+
 bool ca = false;
 bool calib_donez = false;
+
+bool hashSent = true;
 
 bool sleep_modez = true;
 
@@ -107,7 +111,7 @@ int rateSpot_gsr = 0;
 
 bool sendingEnabled = false;
 bool sendinghashEnabled = false;
-bool hashSent = false;
+bool hasss = false;
 
 uint8_t calib_done = 0x0C;
 
@@ -181,6 +185,7 @@ void setup() {
 
 void loop() {
   deep_sleep();
+  green();
   //checkBatteryStatus();
   /**
   if (isCharging) {
@@ -224,7 +229,7 @@ void loop() {
       }
       **/
       //}
-      if(sendingEnabled && hashSent) {
+      if(sendingEnabled) {
         txChar.writeValue(ramData.moods[1].hash, 32); //mood is sent here //txChar.writeValue(ramData.moods[i].hash, 32);
         DEBUG_PRINTLN("Mood sent!");
       }
@@ -250,12 +255,9 @@ void loop() {
         }
         **/
         
-        if (!hashSent && received == 0x01) {
-          sendingEnabled = true;
+        if ((plsHashout || !hashSent) && received == 0x01) {
           sleep_modez = false;
           currentHashIndex = 0;
-          sendinghashEnabled = true;
-          hashSent = false;
 
           ramData.magic = 0xDEADBEEF;
             //ramData.hashz_flashz_done = false;
@@ -271,6 +273,7 @@ void loop() {
 
           DEBUG_PRINTLN(F("New mood hashes generated and saved to flash."));
           loadFromFlash();
+          plsHashout = false;
         }
         else if (received == 0x03) {
           //txChar.writeValue(lastMessage);
@@ -294,6 +297,7 @@ void loop() {
             DEBUG_PRINTLN(currentHashIndex);
           } else {
             sendinghashEnabled = false;
+            sendingEnabled = true;
             hashSent = true;
             DEBUG_PRINTLN("All hashes sent. Sync complete.");
             DEBUG_PRINTLN(hashSent);
@@ -507,6 +511,27 @@ void loadFromFlash() {
   }
 }
 
+void green() {
+  digitalWrite(LED_BLUE, HIGH);
+  digitalWrite(LED_RED, HIGH);
+  pinMode(LED_GREEN, OUTPUT);
+  digitalWrite(LED_GREEN, LOW);
+}
+
+void blue() {
+  digitalWrite(LED_GREEN, HIGH);
+  digitalWrite(LED_RED, HIGH);
+  pinMode(LED_BLUE, OUTPUT);
+  digitalWrite(LED_BLUE, LOW);
+}
+
+void red() {
+  digitalWrite(LED_GREEN, HIGH);
+  digitalWrite(LED_BLUE, HIGH);
+  pinMode(LED_BLUE, OUTPUT);
+  digitalWrite(LED_RED, LOW);
+}
+
 void calibrationz() {
   /**
   unsigned long startTime = millis();
@@ -561,12 +586,15 @@ void loadCalibrationFromFlash() {
 }
 
 void deep_sleep() {
+  DEBUG_PRINTLN("Good night!");
+  blue();
+  delay(10000);
   while (sleep_modez) {
     central = BLE.central();
     sd_app_evt_wait();
-    DEBUG_PRINTLN("Good night!");
 
     if (central) {
+      red();
       DEBUG_PRINT("Connected to: ");
       DEBUG_PRINTLN(central.address());
       while (central.connected()) {
@@ -577,11 +605,9 @@ void deep_sleep() {
             DEBUG_PRINTLN(received);
 
             if (received == 0x01) {
-            sendingEnabled = true;
             sleep_modez = false;
             currentHashIndex = 0;
             sendinghashEnabled = true;
-            hashSent = false;
 
             ramData.magic = 0xDEADBEEF;
             //ramData.hashz_flashz_done = false;
@@ -604,6 +630,7 @@ void deep_sleep() {
               calibrationz();
               txChar.writeValue(&calib_done, 1);
               DEBUG_PRINTLN("Calibration complete");
+              plsHashout = true;
             }
             break;
           }
