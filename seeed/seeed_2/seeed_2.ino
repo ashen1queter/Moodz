@@ -1,12 +1,13 @@
 #include <ArduinoBLE.h>
-#include <Wire.h>
-#include "MAX30105.h"
-#include "heartRate.h"
+//#include <Wire.h>
+//#include "MAX30105.h"
+//#include "heartRate.h"
 #include <Crypto.h>
 #include <SHA256.h>
 #include "nrf.h"
 #include "nrf_nvmc.h"
-#include "nrf_gpio.h"
+#include "nrf_soc.h"
+#include "nrf_power.h"
 
 #define FLASH_PAGE_SIZE    4096
 #define FLASH_SIZE         (1024 * 1024)
@@ -16,22 +17,6 @@
 #define CALIBRATION_DURATION 5000   
 #define CALIBRATION_INTERVAL 50     
 #define CALIBRATION_ALPHA 0.2f
-
-#define BTN_MODE   D1
-#define BTN_ENTER  D2
-#define BTN_START  D3
-
-enum DeviceMode {
-  MODE_CALIBRATION,
-  MODE_NORMAL,
-  MODE_SLEEP
-};
-
-volatile DeviceMode currentMode = MODE_NORMAL;
-volatile bool enterPressed = false;
-volatile bool startPressed = false;
-unsigned long lastInterrupt = 0;
-#define DEBOUNCE_MS 250
 
 struct MoodHash {
   char mood[16];
@@ -62,7 +47,7 @@ FlashData *flashData = (FlashData *)USER_FLASH_START;
 FlashData ramData;
 
 SHA256 sha256;
-MAX30105 particleSensor;
+//MAX30105 particleSensor;
 
 #define DEBUG 1
 
@@ -88,9 +73,15 @@ void loadFromFlash();
 void saveToFlash();
 void loadCalibrationFromFlash();
 void saveCalibrationToFlash();
+void deep_sleep();
 
 bool isCharging = false;
 bool isCharged = false;
+
+bool ca = false;
+bool calib_donez = false;
+
+bool sleep_modez = true;
 
 float temperature;
 
@@ -117,12 +108,12 @@ int rateSpot_gsr = 0;
 bool sendingEnabled = false;
 bool sendinghashEnabled = false;
 bool hashSent = false;
-bool inti = false;
 
-//unsigned long previousMillis = 0;
-//const unsigned long interval = 2000;
+uint8_t calib_done = 0x0C;
+
+unsigned long previousMillis = 0;
+const unsigned long interval = 2000;
 //char lastMessage[64] = "Hello from XIAO Sense!";
-byte sent = 0x04;
 byte received;
 
 BLEDevice central;
@@ -138,36 +129,31 @@ void setup() {
     while (!Serial);
   #endif
 
-  nrf_nvmc_page_erase((uint32_t)flashData);
+  //nrf_nvmc_page_erase((uint32_t)flashData);
   DEBUG_PRINTLN(" ");
   DEBUG_PRINTLN("YO!");
 
-  if (!flashData->hashz_flashz_done && flashData->magic != 0xDEADBEEF) {
-    ramData.magic = 0xDEADBEEF;
-    ramData.hashz_flashz_done = false;
+  /**
+  ramData.magic = 0xDEADBEEF;
+  //ramData.hashz_flashz_done = false;
 
-    hashz_flashz("happy", &ramData.moods[0]);
-    hashz_flashz("sad", &ramData.moods[1]);
-    hashz_flashz("calm", &ramData.moods[2]);
-    hashz_flashz("energetic", &ramData.moods[3]);
-    ramData.hashz_flashz_done = true;
-    saveToFlash();
-  }
+  hashz_flashz("happy", &ramData.moods[0]);
+  hashz_flashz("sad", &ramData.moods[1]);
+  hashz_flashz("calm", &ramData.moods[2]);
+  hashz_flashz("energetic", &ramData.moods[3]);
 
-  else {
-    DEBUG_PRINTLN(F("Loading hashes from flash..."));
-    loadFromFlash();
-  }
+  //ramData.hashz_flashz_done = true;
 
-  if (!flashCalib->calib_done || flashCalib->magic != 0xDEADBEEF) {
-    calibrationz();
-    calib.magic = 0xDEADBEEF;      
-    saveCalibrationToFlash(); 
-  }
-  else
-    loadCalibrationFromFlash();
+  saveToFlash();
+
+  DEBUG_PRINTLN(F("New mood hashes generated and saved to flash."));
+  loadFromFlash();
+  **/
+
+  loadCalibrationFromFlash();
 
   // Initialize MAX30105 sensor
+  /**
   if (!particleSensor.begin(Wire, I2C_SPEED_FAST)) //Use default I2C port, 400kHz speed
   {
     Serial.println("MAX30105 was not found. Please check wiring/power. ");
@@ -179,8 +165,7 @@ void setup() {
   particleSensor.setPulseAmplitudeRed(0x0A);
   particleSensor.setPulseAmplitudeGreen(0);
   particleSensor.enableDIETEMPRDY();
-
-  setupButtons();
+  **/
 
   // Initialize BLE
   if (!BLE.begin()) while (1);
@@ -191,13 +176,11 @@ void setup() {
   BLE.addService(myService);
   BLE.advertise();
 
-  //central = BLE.central();
-
   //DEBUG_PRINTLN("BLE started, advertising as XIAO_Sense");
 }
 
 void loop() {
-  central = BLE.central();
+  deep_sleep();
   //checkBatteryStatus();
   /**
   if (isCharging) {
@@ -206,29 +189,142 @@ void loop() {
     return;
   }
   **/
-
-  /**
-  if (digitalRead(CHARGE_DETECT_PIN) == LOW) {  
-    lowPowerWaitWhileCharging();
-  }
-  **/
-
   //BLE_rssi();
-  __WFE();
+  central = BLE.central();
 
-  if (currentMode == MODE_CALIBRATION && enterPressed) {
-    enterPressed = false;
-    calibrationz();
-  }
-  else if (currentMode == MODE_NORMAL && startPressed) {
-    startPressed = false;
-    startNormalOperation();
-  }
-  else if (currentMode == MODE_SLEEP) {
-    goToDeepSleep();
+  if (central && !sleep_modez) {
+    while (central.connected()) {
+      //unsigned long currentMillis = millis();
+
+      // Periodic BLE sending
+      //if (sendingEnabled && currentMillis - previousMillis >= interval) {
+        //previousMillis = currentMillis;
+
+        //Heartbeat_sensor();
+        //GSR_sensor();
+        //Temp_sensor();
+        //Mood_detection
+        /**
+        snprintf(lastMessage, sizeof(lastMessage),
+                 "HR: %.1f bpm | Avg: %d | GSR: %.1f | Temp: %.2f°C",
+                 beatsPerMinute, beatAvg, gsrFiltered, temperature);
+        **/
+       //snprintf(lastMessage, sizeof(lastMessage), "Jesica");
+        
+        //txChar.writeValue(sent); //mood is sent here //txChar.writeValue(ramData.moods[i].hash, 32);
+        //DEBUG_PRINTLN(sent);
+
+        /**
+        if(sendinghashEnabled) {
+          for (int i = 0; i < 4; i++)
+          txChar.writeValue(ramData.moods[i].hash, 32);
+        }
+        sendinghashEnabled = false;
+        DEBUG_PRINTLN("All hashes sent over BLE");
+      }
+      **/
+      //}
+      if(sendingEnabled && hashSent) {
+        txChar.writeValue(ramData.moods[1].hash, 32); //mood is sent here //txChar.writeValue(ramData.moods[i].hash, 32);
+        DEBUG_PRINTLN("Mood sent!");
+      }
+      /**
+      if(calib_donez && !ca) {
+        txChar.writeValue(&calib_done, 1);
+        DEBUG_PRINTLN("Calibration done!");
+        ca = true;
+      }
+      **/
+      // Handle BLE RX commands
+      if (rxChar.written()) {
+        rxChar.readValue(&received, 1);
+
+        DEBUG_PRINT("Received command: ");
+        DEBUG_PRINTLN(received);
+
+        /**
+        if (received == 0x01 || received == 0x02) {
+          sendingEnabled = true;
+          sleep_modez = false;
+          DEBUG_PRINTLN("Sending started/resumed.");
+        }
+        **/
+        
+        if (!hashSent && received == 0x01) {
+          sendingEnabled = true;
+          sleep_modez = false;
+          currentHashIndex = 0;
+          sendinghashEnabled = true;
+          hashSent = false;
+
+          ramData.magic = 0xDEADBEEF;
+            //ramData.hashz_flashz_done = false;
+
+          hashz_flashz("happy", &ramData.moods[0]);
+          hashz_flashz("sad", &ramData.moods[1]);
+          hashz_flashz("calm", &ramData.moods[2]);
+          hashz_flashz("energetic", &ramData.moods[3]);
+
+            //ramData.hashz_flashz_done = true;
+
+          saveToFlash();
+
+          DEBUG_PRINTLN(F("New mood hashes generated and saved to flash."));
+          loadFromFlash();
+        }
+        else if (received == 0x03) {
+          //txChar.writeValue(lastMessage);
+          DEBUG_PRINTLN("Retried last message.");
+        } 
+        else if (received == 0x04) {
+          sendingEnabled = false;
+          DEBUG_PRINTLN("Stopped sending.");
+        }
+        else if (received == 0x05) {
+          sendinghashEnabled = true;
+          txChar.writeValue(ramData.moods[currentHashIndex].hash, 32);
+          DEBUG_PRINT("Sent hash index: ");
+          DEBUG_PRINTLN(currentHashIndex);
+        }
+        else if (received == 0x06 && sendinghashEnabled) {
+          currentHashIndex++;
+          if (currentHashIndex < 4) {
+            txChar.writeValue(ramData.moods[currentHashIndex].hash, 32);
+            DEBUG_PRINT("Sent next hash: ");
+            DEBUG_PRINTLN(currentHashIndex);
+          } else {
+            sendinghashEnabled = false;
+            hashSent = true;
+            DEBUG_PRINTLN("All hashes sent. Sync complete.");
+            DEBUG_PRINTLN(hashSent);
+          }
+        }
+        else if (received == 0x0A) {
+          DEBUG_PRINTLN("Ok bye!");
+          sleep_modez = true;
+          BLE.disconnect();   
+        }
+        else if (received == 0x0C) {
+          calibrationz();
+          txChar.writeValue(&calib_done, 1);
+          DEBUG_PRINTLN("Calibration complete");
+        }
+        /**
+        else if (received == 0x0A) {
+          deep_sleep();
+        }
+        **/
+        else {
+          DEBUG_PRINTLN("Unknown command.");
+          sleep_modez = true;
+        }
+      }
+      //DEBUG_PRINTLN("Disconnected.");
+    }
   }
 }
 
+/**
 void GSR_sensor() {
   static bool calibrated = false;
   static int sampleCount = 0;
@@ -251,7 +347,6 @@ void GSR_sensor() {
       }
     }
   } else {
-    **/
 
   int raw = analogRead(GSR_PIN);
   if(raw >= 0) {
@@ -295,7 +390,6 @@ void Temp_sensor() {
   temperature = particleSensor.readTemperature();
 }
 
-/**
 void Battery_charge() {
   digitalWrite(P0_13, HIGH);
   pinMode(ADC_PIN, INPUT);
@@ -329,33 +423,6 @@ void checkBatteryStatus() {
   }
 }
 **/
-
-void lowPowerWaitWhileCharging() {
-  DEBUG_PRINTLN("Entering low-power mode while charging...");
-  BLE.stopAdvertise();
-  BLE.disconnect();
-  BLE.end();
-
-  pinMode(ADC_PIN, INPUT);
-
-  while (true) {
-    int chgState = digitalRead(CHARGE_DETECT_PIN);
-    int adcVal   = analogRead(ADC_PIN); 
-
-    float battPercent = map(adcVal, 2800, 4200, 0, 100); //shld change
-    if (battPercent > 75.0f || chgState == HIGH) {
-      DEBUG_PRINTLN("Battery charged above 75%, waking up...");
-      break;
-    }
-    __WFE();
-    delay(500);
-  }
-
-  BLE.begin();
-  BLE.advertise();
-  DEBUG_PRINTLN("BLE and sensors resumed after charging.");
-}
-
 
 void BLE_rssi() {
   DEBUG_PRINTLN(BLE.rssi());
@@ -441,26 +508,27 @@ void loadFromFlash() {
 }
 
 void calibrationz() {
-  nrf_nvmc_page_erase((uint32_t)flashCalib);
+  /**
   unsigned long startTime = millis();
 
   while (millis() - startTime < CALIBRATION_DURATION) {
-    Heartbeat_sensor();
-    Temp_sensor();
-    GSR_sensor();
+    float hb = Heartbeat_sensor();
+    float tp = Temp_sensor();
+    float gs = GSR_sensor();
 
-    calib.heartbeat = (CALIBRATION_ALPHA * beatAvg) + ((1 - CALIBRATION_ALPHA) * calib.heartbeat);
-    calib.temperature = (CALIBRATION_ALPHA * temperature) + ((1 - CALIBRATION_ALPHA) * calib.temperature);
-    calib.gsr = (CALIBRATION_ALPHA * gsrAvg) + ((1 - CALIBRATION_ALPHA) * calib.gsr);
+    calib.heartbeat = (CALIBRATION_ALPHA * hb) + ((1 - CALIBRATION_ALPHA) * calib.heartbeat);
+    calib.temperature = (CALIBRATION_ALPHA * tp) + ((1 - CALIBRATION_ALPHA) * calib.temperature);
+    calib.gsr = (CALIBRATION_ALPHA * gs) + ((1 - CALIBRATION_ALPHA) * calib.gsr);
   }
-
-  //calib.heartbeat = 1.0;
-  //calib.temperature = 2.0;
-  //calib.gsr = 3.0;
+  **/
+  nrf_nvmc_page_erase((uint32_t)flashCalib);
+  calib.heartbeat = 1.0;
+  calib.temperature = 2.0;
+  calib.gsr = 3.0;
   calib.calib_done = true;
-
-  if (central.connected())
-    txChar.writeValue("Calibration done!");
+  calib.magic = 0xDEADBEEF;
+  saveCalibrationToFlash(); 
+  calib_donez = true;
 }
 
 void saveCalibrationToFlash() {
@@ -477,192 +545,69 @@ void loadCalibrationFromFlash() {
 
     DEBUG_PRINT(F("Heartbeat: "));
     Serial.print(calib.heartbeat, 2);
+    Serial.println();
 
     DEBUG_PRINT(F("Temperature: "));
     Serial.print(calib.temperature, 2);
+    Serial.println();
 
     DEBUG_PRINT(F("GSR: "));
     Serial.print(calib.gsr, 2);
+    Serial.println();
   } 
   else {
     Serial.println(F("No valid calibration in flash."));
   }
 }
 
-void green() {
-  digitalWrite(LED_BLUE, HIGH);
-  digitalWrite(LED_RED, HIGH);
-  pinMode(LED_GREEN, OUTPUT);
-  digitalWrite(LED_GREEN, LOW);
-}
+void deep_sleep() {
+  while (sleep_modez) {
+    central = BLE.central();
+    sd_app_evt_wait();
+    DEBUG_PRINTLN("Good night!");
 
-void blue() {
-  digitalWrite(LED_GREEN, HIGH);
-  digitalWrite(LED_RED, HIGH);
-  pinMode(LED_BLUE, OUTPUT);
-  digitalWrite(LED_BLUE, LOW);
-}
+    if (central) {
+      DEBUG_PRINT("Connected to: ");
+      DEBUG_PRINTLN(central.address());
+      while (central.connected()) {
+        if (rxChar.written()) {
+            rxChar.readValue(&received, 1);
 
-void red() {
-  digitalWrite(LED_GREEN, HIGH);
-  digitalWrite(LED_BLUE, HIGH);
-  pinMode(LED_BLUE, OUTPUT);
-  digitalWrite(LED_RED, LOW);
-}
+            DEBUG_PRINT("Received command: ");
+            DEBUG_PRINTLN(received);
 
-void onModePress() {
-  unsigned long now = millis();
-  if (now - lastInterrupt < DEBOUNCE_MS) return;
-  lastInterrupt = now;
+            if (received == 0x01) {
+            sendingEnabled = true;
+            sleep_modez = false;
+            currentHashIndex = 0;
+            sendinghashEnabled = true;
+            hashSent = false;
 
-  currentMode = (DeviceMode)((currentMode + 1) % 3);
-  DEBUG_PRINTLN(F("Mode changed to: "));
-  if (currentMode == MODE_CALIBRATION) {
-    red(); //Red
-    DEBUG_PRINTLN(F("Calibration"));
-    txChar.writeValue("Calibration");
-  }
-  else if (currentMode == MODE_NORMAL) {
-    blue(); //Blue
-    DEBUG_PRINTLN(F("Normal"));
-    txChar.writeValue("Normal");
-  }
-  else {
-    DEBUG_PRINTLN(F("Sleep"));
-    green(); //Green
-    txChar.writeValue("Sleep");
-  }
-}
+            ramData.magic = 0xDEADBEEF;
+            //ramData.hashz_flashz_done = false;
 
-void onEnterPress() {
-  unsigned long now = millis();
-  if (now - lastInterrupt < DEBOUNCE_MS) return;
-  lastInterrupt = now;
+            hashz_flashz("happy", &ramData.moods[0]);
+            hashz_flashz("sad", &ramData.moods[1]);
+            hashz_flashz("calm", &ramData.moods[2]);
+            hashz_flashz("energetic", &ramData.moods[3]);
 
-  enterPressed = true;
-  DEBUG_PRINTLN(F("Enter pressed"));
-}
+            //ramData.hashz_flashz_done = true;
 
-void onStartPress() {
-  unsigned long now = millis();
-  if (now - lastInterrupt < DEBOUNCE_MS) return;
-  lastInterrupt = now;
+            saveToFlash();
 
-  startPressed = true;
-  DEBUG_PRINTLN(F("Start pressed"));
-}
-
-void setupButtons() {
-  pinMode(BTN_MODE, INPUT_PULLUP);
-  pinMode(BTN_ENTER, INPUT_PULLUP);
-  pinMode(BTN_START, INPUT_PULLUP);
-
-  attachInterrupt(digitalPinToInterrupt(BTN_MODE),  onModePress,  FALLING);
-  attachInterrupt(digitalPinToInterrupt(BTN_ENTER), onEnterPress, FALLING);
-  attachInterrupt(digitalPinToInterrupt(BTN_START), onStartPress, FALLING);
-
-  DEBUG_PRINTLN(F("Buttons initialized"));
-}
-
-void startNormalOperation() {
-  inti = true;
-
-  if (central) {
-    DEBUG_PRINT("Connected to: ");
-    DEBUG_PRINTLN(central.address());
-
-    while (central.connected()) {
-      //unsigned long currentMillis = millis();
-
-      // Periodic BLE sending
-      //if (sendingEnabled && currentMillis - previousMillis >= interval) {
-        //previousMillis = currentMillis;
-
-        Heartbeat_sensor();
-        GSR_sensor();
-        Temp_sensor();
-        //Mood_detection();
-        /**
-        snprintf(lastMessage, sizeof(lastMessage),
-                 "HR: %.1f bpm | Avg: %d | GSR: %.1f | Temp: %.2f°C",
-                 beatsPerMinute, beatAvg, gsrFiltered, temperature);
-        **/
-       //snprintf(lastMessage, sizeof(lastMessage), "Jesica");
-        
-        //txChar.writeValue(sent); //mood is sent here //txChar.writeValue(ramData.moods[i].hash, 32);
-        //DEBUG_PRINTLN(sent);
-
-        /**
-        if(sendinghashEnabled) {
-          for (int i = 0; i < 4; i++)
-          txChar.writeValue(ramData.moods[i].hash, 32);
-        }
-        sendinghashEnabled = false;
-        DEBUG_PRINTLN("All hashes sent over BLE");
-      }
-      **/
-      //}
-      if (inti) {
-        txChar.writeValue("Started!");
-        inti = false;
-      }
-
-      if(sendingEnabled && hashSent) {
-        txChar.writeValue(sent); //mood is sent here //txChar.writeValue(ramData.moods[i].hash, 32);
-        DEBUG_PRINTLN(sent);
-      }
-      // Handle BLE RX commands
-      if (rxChar.written()) {
-        rxChar.readValue(&received, 1);
-
-        DEBUG_PRINT("Received command: ");
-        DEBUG_PRINTLN(received);
-
-        if (received == 0x01 || received == 0x02) {
-          sendingEnabled = true;
-          DEBUG_PRINTLN("Sending started/resumed.");
-        }
-        else if (received == 0x03) {
-          //txChar.writeValue(lastMessage);
-          DEBUG_PRINTLN("Retried last message.");
-        } 
-        else if (received == 0x04) {
-          sendingEnabled = false;
-          DEBUG_PRINTLN("Stopped sending.");
-        }
-        else if (received == 0x05) {
-          sendinghashEnabled = true;
-          txChar.writeValue(ramData.moods[currentHashIndex].hash, 32);
-          DEBUG_PRINT("Sent hash index: ");
-          DEBUG_PRINTLN(currentHashIndex);
-        }
-        else if (received == 0x06 && sendinghashEnabled) {
-          currentHashIndex++;
-          if (currentHashIndex < 4) {
-            txChar.writeValue(ramData.moods[currentHashIndex].hash, 32);
-            DEBUG_PRINT("Sent next hash: ");
-            DEBUG_PRINTLN(currentHashIndex);
-          } else {
-            sendinghashEnabled = false;
-            hashSent = true;
-            DEBUG_PRINTLN("All hashes sent. Sync complete.");
-            DEBUG_PRINTLN(hashSent);
+            DEBUG_PRINTLN(F("New mood hashes generated and saved to flash."));
+            loadFromFlash();
+            DEBUG_PRINTLN("Sending started/resumed.");
+          }
+            else if (received == 0x0C) {
+              sleep_modez = false;
+              calibrationz();
+              txChar.writeValue(&calib_done, 1);
+              DEBUG_PRINTLN("Calibration complete");
+            }
+            break;
           }
         }
-        else {
-          DEBUG_PRINTLN("Unknown command.");
-        }
       }
-      //DEBUG_PRINTLN("Disconnected.");
     }
   }
-}
-
-void goToDeepSleep() {
-  Ble.disconnect();
-  DEBUG_PRINTLN(F("Entering deep sleep... press MODE to wake"));
-  nrf_gpio_cfg_sense_input(BTN_MODE, NRF_GPIO_PIN_PULLUP, NRF_GPIO_PIN_SENSE_LOW);
-  NRF_POWER->SYSTEMOFF = 1;  
-  txChar.writeValue("Slept!");
-  while (1);
-}
