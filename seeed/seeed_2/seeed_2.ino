@@ -592,18 +592,17 @@ void deep_sleep() {
   BLE.advertise();
 
   while (sleep_modez) {
-    sd_app_evt_wait();
+    sd_app_evt_wait();   
     central = BLE.central();
 
     if (central && central.connected()) {
+      red();
       DEBUG_PRINT("Connected to: ");
       DEBUG_PRINTLN(central.address());
 
       while (central.connected()) {
-        //red();
         if (rxChar.written()) {
           rxChar.readValue(&received, 1);
-
           DEBUG_PRINT("Received command: ");
           DEBUG_PRINTLN(received);
 
@@ -635,6 +634,7 @@ void deep_sleep() {
             BLE.disconnect();
             BLE.stopAdvertise();
           }
+
           break;
         }
       }
