@@ -307,7 +307,7 @@ void loop() {
           DEBUG_PRINTLN("Ok bye!");
           sleep_modez = true;
           BLE.disconnect(); 
-          BLE.stopAdvertise();  
+          //BLE.stopAdvertise();  
         }
         else if (received == 0x0C) {
           calibrationz();
@@ -596,7 +596,7 @@ void deep_sleep() {
     central = BLE.central();
 
     if (central && central.connected()) {
-      red();
+      //red();
       DEBUG_PRINT("Connected to: ");
       DEBUG_PRINTLN(central.address());
 
@@ -632,7 +632,7 @@ void deep_sleep() {
             DEBUG_PRINTLN("Ok bye!");
             sleep_modez = true;
             BLE.disconnect();
-            BLE.stopAdvertise();
+            //BLE.stopAdvertise();
           }
 
           break;
